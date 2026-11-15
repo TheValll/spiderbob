@@ -61,29 +61,47 @@ After a few hours of research, I found four possible ways to power the 18 servos
 
 For initial testing, I will try option 1 and monitor current draw and temperature while waiting for Tribotix's reply. If the current limits become a problem, I will consider options 3 and 4.
 
+### 12/13/2026
+
+Today, I discovered the world of PCB design, so I decided to give option 3 a try. I spent some time learning EasyEDA and designed my own power distribution board with seven TTL ports and a planned capacity of 12 V / 20 A.
+
+Here's what I came up with: the electrical schematic, the PCB layout, and a 3D render.
+
+![Electrical schematic](schemas/schema1.png)
+![PCB layout](schemas/schema2.png)
+![3D render of the PCB](schemas/schema3.png)
+
+Now I'm waiting for the PCB to arrive. I've decided to go with option 3 instead of option 1, using my own board in place of the [ROBOTIS U2D2 power hub](https://www.generationrobots.com/fr/403359-u2d2-power-hub-board.html).
+
+I can now make a list of the hardware I'll need for the next steps:
+
+1. Test the servos when they arrive and start developing on my desktop.
+2. Work on the onboard system and mechanical parts over the next few months.
+
 #### Hardware List
 
-| Component                                                        | Reference                                                                                                                     |             Price | Purchased? |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------: | ---------- |
-| 18× Servomotors                                                  | ROBOTIS Dynamixel XL430-W250-T                                                                                                |           €320.00 | Yes        |
-| 1× USB-to-TTL interface, USB cable included                      | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                              |            €55.95 | No         |
-| 1× Power hub, switch, spacers and hub-to-U2D2 X3P cable included | [ROBOTIS U2D2 PHB Set — 902-0145-001](https://www.gotronic.fr/art-hub-d-alimentation-u2d2-phb-set-37599.htm)                  |            €29.50 | No         |
-| 1× AC/DC power supply, EU mains cord included                    | [Weishuo — 12 V / 10 A / 120 W, 5.5 × 2.5 mm, centre positive](https://www.amazon.fr/dp/B0DM833Z6L)                           |            €18.04 | No         |
-| 14× X3P JST–JST cables, 100 mm                                   | [ROBOTIS — CABLE X3P 100MM, individual cables](https://www.reichelt.com/fr/fr/shop/produit/dynamixel_adapterkabel_x3p-439208) |          ≈ €42.00 | No         |
-| 6× X3P JST–JST cables, 180 mm — buy one pack of 10               | [ROBOTIS — 903-0249-000, listed in the cable catalogue](https://www.generationrobots.com/fr/268-cables-dynamixel)             |          ≈ €27.14 | No         |
-| 1× Development PC                                                | Already owned                                                                                                                 |     €0 additional | Yes        |
-| **TEST SETUP SUBTOTAL**                                          | **Including purchased servos; excluding shipping**                                                                            |     **≈ €492.63** |            |
-| ----                                                             | ----                                                                                                                          |              ---- | ----       |
-| 2× Five-port splitters                                           | [ROBOTIS 3P JST Expansion Board — 903-0306-000](https://en.robotis.com/shop_en/item.php?it_id=903-0306-000)                   |               TBD | To confirm |
-| 1× RGB-D camera                                                  | Intel RealSense D435i                                                                                                         | €200.00 estimated | Yes        |
-| 1× Camera USB 3 data cable                                       | Check used camera package                                                                                                     |               TBD | To confirm |
-| 1× LiDAR, USB adapter and USB cable included                     | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)                   |            €83.90 | No         |
-| Existing backup power supply                                     | 7.5 V / 6 A / 45 W                                                                                                            |     €0 additional | Yes        |
-| Onboard computer                                                 | TBD                                                                                                                           |               TBD | No         |
-| Battery and charger                                              | TBD                                                                                                                           |               TBD | No         |
-| Voltage regulators                                               | TBD                                                                                                                           |               TBD | No         |
-| Fuse and holder — selection deferred to battery integration      | TBD                                                                                                                           |               TBD | No         |
-| Main chassis and six legs                                        | Custom design                                                                                                                 |               TBD | No         |
-| Servo mounts and sensor brackets                                 | Custom design / TBD                                                                                                           |               TBD | No         |
-| Screws, nuts, bearings and spacers                               | TBD                                                                                                                           |               TBD | No         |
-| **PROVISIONAL TOTAL**                                            | **Excluding TBD items and shipping; estimated prices to confirm**                                                             |     **≈ €776.53** |            |
+| Component                                                               | Reference                                                                                                          |                 Price | Purchased? |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------: | ---------- |
+| **DESKTOP DEVELOPMENT**                                                 |                                                                                                                    |                       |            |
+| 18× Servomotors                                                         | [ROBOTIS Dynamixel XL430-W250-T](https://docs.robotis.com/docs/dxl/model_reference/x_series/xl_series/xl430-w250/) |               €320.00 | Yes        |
+| 1× Seven-port distribution PCB                                          | Custom PCB — 12 V / 20 A, XT60 or screw-terminal input, 2 capacitors                                               |                €73.35 | Yes        |
+| 1× USB-to-TTL interface, USB cable included                             | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                   |                €55.95 | No         |
+| 14× X3P JST–JST cables, 100 mm — 12 inter-servo, 1 PCB-to-U2D2, 1 spare | [MYBOTSHOP — DYNAMIXEL Cable X3P 100mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-100mm)                        |                €41.30 | No         |
+| 6× X3P JST–JST cables, 180 mm — legs to PCB                             | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €23.70 | No         |
+| 1× AC/DC power supply, EU mains cord included                           | [Weishuo — 12 V / 20 A / 250 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €32 | No         |
+| 1× RGB-D camera                                                         | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
+| 1× LiDAR, USB adapter and USB cable included                            | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
+| **DEVELOPMENT SUBTOTAL**                                                |                                                                                                                    | **€844.39 estimated** |            |
+| ----                                                                    | ----                                                                                                               |                  ---- | ----       |
+| **ONBOARD HARDWARE AND MECHANICAL DESIGN — LATER**                      |                                                                                                                    |                       |            |
+| Onboard computer                                                        | TBD                                                                                                                |                   TBD | No         |
+| Battery                                                                 | TBD                                                                                                                |                   TBD | No         |
+| Compatible battery charger                                              | TBD                                                                                                                |                   TBD | No         |
+| Battery-to-PCB power cable                                              | XT60 or terminal connection — TBD                                                                                  |                   TBD | No         |
+| Voltage regulators for computer and sensors                             | TBD                                                                                                                |                   TBD | No         |
+| Main DC power switch                                                    | TBD                                                                                                                |                   TBD | No         |
+| Fuse and holder                                                         | Selection deferred to battery integration                                                                          |                   TBD | No         |
+| Main chassis and six legs                                               | Custom design                                                                                                      |                   TBD | No         |
+| Servo mounts and sensor brackets                                        | Custom design / TBD                                                                                                |                   TBD | No         |
+| Screws, nuts, bearings and spacers                                      | TBD                                                                                                                |                   TBD | No         |
+| **PROVISIONAL TOTAL**                                                   | **Excluding TBD items and shipping**                                                                               | **€844.39 estimated** |            |
