@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'Foot_x6_TPU.step',
-/* time_stamp */ '2026-11-15T23:06:48+01:00',
+/* time_stamp */ '2026-11-16T00:06:43+01:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -708,7 +708,7 @@ SOLID_ANGLE_UNIT()
 #630=PRODUCT_DEFINITION_SHAPE('',$,#633);
 #631=SHAPE_REPRESENTATION('',(#313),#623);
 #632=PRODUCT_DEFINITION_CONTEXT('part definition',#637,'design');
-#633=PRODUCT_DEFINITION('2026-11-15-23-06-48-646','Foot_x6_TPU',#634,#632);
+#633=PRODUCT_DEFINITION('2026-11-16-00-06-43-013','Foot_x6_TPU',#634,#632);
 #634=PRODUCT_DEFINITION_FORMATION('',$,#639);
 #635=PRODUCT_RELATED_PRODUCT_CATEGORY('Foot_x6_TPU','Foot_x6_TPU',(#639));
 #636=APPLICATION_PROTOCOL_DEFINITION('international standard',
@@ -716,7 +716,7 @@ SOLID_ANGLE_UNIT()
 #637=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #638=PRODUCT_CONTEXT('part definition',#637,'mechanical');
-#639=PRODUCT('2026-11-15-23-06-48-646','Foot_x6_TPU',$,(#638));
+#639=PRODUCT('2026-11-16-00-06-43-013','Foot_x6_TPU',$,(#638));
 #640=PRESENTATION_STYLE_ASSIGNMENT((#641));
 #641=SURFACE_STYLE_USAGE(.BOTH.,#642);
 #642=SURFACE_SIDE_STYLE('',(#643));

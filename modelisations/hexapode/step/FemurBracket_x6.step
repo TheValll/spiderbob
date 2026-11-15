@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'FemurBracket_x6.step',
-/* time_stamp */ '2026-11-15T23:06:48+01:00',
+/* time_stamp */ '2026-11-16T00:06:42+01:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -1056,7 +1056,7 @@ SOLID_ANGLE_UNIT()
 #1003=PRODUCT_DEFINITION_SHAPE('',$,#1006);
 #1004=SHAPE_REPRESENTATION('',(#606),#996);
 #1005=PRODUCT_DEFINITION_CONTEXT('part definition',#1010,'design');
-#1006=PRODUCT_DEFINITION('2026-11-15-23-06-48-360','FemurBracket_x6',#1007,
+#1006=PRODUCT_DEFINITION('2026-11-16-00-06-42-774','FemurBracket_x6',#1007,
 #1005);
 #1007=PRODUCT_DEFINITION_FORMATION('',$,#1012);
 #1008=PRODUCT_RELATED_PRODUCT_CATEGORY('FemurBracket_x6',
@@ -1066,7 +1066,7 @@ SOLID_ANGLE_UNIT()
 #1010=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #1011=PRODUCT_CONTEXT('part definition',#1010,'mechanical');
-#1012=PRODUCT('2026-11-15-23-06-48-360','FemurBracket_x6',$,(#1011));
+#1012=PRODUCT('2026-11-16-00-06-42-774','FemurBracket_x6',$,(#1011));
 #1013=PRESENTATION_STYLE_ASSIGNMENT((#1014));
 #1014=SURFACE_STYLE_USAGE(.BOTH.,#1015);
 #1015=SURFACE_SIDE_STYLE('',(#1016));

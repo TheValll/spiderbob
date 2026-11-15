@@ -155,27 +155,28 @@ Counted on the 3D model, which now includes every screw.
 | M2.5 × 6            |       76 |           |       |
 | M3 × 6              |        2 |           |       |
 | M3 × 10             |        6 |           |       |
-| M3 × 12             |        4 |           |       |
+| M3 × 16             |        2 |           |       |
 | M3 × 45             |        4 |           |       |
 | M3 hex nut          |       10 |           |       |
-| M3 nylon-insert nut |        4 |           |       |
+| M3 nylon-insert nut |        2 |           |       |
 
 #### Adjustable camera mount
 
-The RealSense is held by two printed parts: a fixed base screwed on the mid plate, and a cradle screwed to the back of the camera. The cradle pivots on two M3 screws at the bottom-back edge of the camera, so tilting it down moves the camera forward, away from the shell. Two other M3 screws slide in arc slots in the base and clamp the cradle at any angle from 0 deg (horizontal) to 30 deg down, with ticks every 5 deg on the base. The default angle is 12 deg down. Both parts print without supports: the base on its foot, the cradle on its back plate.
-
-With the camera at any angle, a front leg swung fully forward (55 deg) must not lift its femur above -58 deg, otherwise it touches the camera. At 45 deg forward the limit is -74 deg, and below 35 deg forward the femur is free.
+| Notch | Angle (down) | Radians |
+| ----: | -----------: | ------: |
+|     1 |        0 deg |   0.000 |
+|     2 |       10 deg |   0.175 |
+|     3 |       20 deg |   0.349 |
+|     4 |       30 deg |   0.524 |
 
 #### Provisional limits
-
-Degrees and radians from the default (standing) pose, with a 3 deg safety margin before the first self-collision measured in the 3D model. The femur is limited to +75 deg down by the 100 mm femur to tibia cable (it would need 105 mm at the +116 deg collision limit). C = coxa, F = femur, T = tibia servo.
 
 Top view, coxa limits (+ = counter-clockwise seen from above):
 
 ```
                                FRONT
-  FL  C: -55/+55 deg                     FR  C: -55/+55 deg
-         -0.960/+0.960 rad                      -0.960/+0.960 rad
+  FL  C: -35/+55 deg                     FR  C: -55/+35 deg
+         -0.611/+0.960 rad                      -0.960/+0.611 rad
                 [C]                              [C]
                    \                            /
                     +--------------------------+
@@ -195,6 +196,7 @@ Side view of one leg, femur and tibia limits (same for all six legs):
 
 ```
               F: -86 deg (-1.501 rad) up / +75 deg (+1.309 rad) down
+                 front legs: -75 deg (-1.309 rad) up
                           |
   BODY ===[C]============[F]============[T]
                                           \
@@ -213,3 +215,12 @@ Side view of one leg, femur and tibia limits (same for all six legs):
 | Camera, LiDAR, U2D2, PCB, cables and screws      | ~0.36 kg        |
 | **Current subtotal**                             | **~2.0 kg**     |
 | Battery (3S 5000 mAh) and onboard computer added | **~2.5–2.8 kg** |
+
+#### Standing pose
+
+| Joint  |       Angle | Radians |
+| ------ | ----------: | ------: |
+| Coxa   |       0 deg |   0.000 |
+| Femur  |     −20 deg |  −0.349 |
+| Tibia  |     +95 deg |  +1.658 |
+| Camera | 10 deg down |   0.175 |
