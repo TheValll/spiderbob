@@ -63,7 +63,7 @@ For initial testing, I will try option 1 and monitor current draw and temperatur
 
 ### 12/13/2026
 
-Today, I discovered the world of PCB design, so I decided to give option 3 a try. I spent some time learning EasyEDA and designed my own power distribution board with seven TTL ports and a planned capacity of 12 V / 20 A.
+Today, I discovered the world of PCB design, so I decided to give option 3 a try. I spent some time learning [EasyEDA](https://easyeda.com/) and designed my own power distribution board with seven TTL ports and a planned capacity of 12 V / 20 A.
 
 Here's what I came up with: the electrical schematic, the PCB layout, and a 3D render.
 
@@ -85,13 +85,13 @@ I can now make a list of the hardware I'll need for the next steps:
 | **DESKTOP DEVELOPMENT**                                                 |                                                                                                                    |                       |            |
 | 18× Servomotors                                                         | [ROBOTIS Dynamixel XL430-W250-T](https://docs.robotis.com/docs/dxl/model_reference/x_series/xl_series/xl430-w250/) |               €320.00 | Yes        |
 | 1× Seven-port distribution PCB                                          | Custom PCB — 12 V / 20 A, XT60 or screw-terminal input, 2 capacitors                                               |                €73.35 | Yes        |
-| 1× USB-to-TTL interface, USB cable included                             | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                   |                €55.95 | No         |
-| 14× X3P JST–JST cables, 100 mm — 12 inter-servo, 1 PCB-to-U2D2, 1 spare | [MYBOTSHOP — DYNAMIXEL Cable X3P 100mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-100mm)                        |                €41.30 | No         |
-| 6× X3P JST–JST cables, 180 mm — legs to PCB                             | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €23.70 | No         |
-| 1× AC/DC power supply, EU mains cord included                           | [Weishuo — 12 V / 20 A / 250 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €32 | No         |
+| 1× USB-to-TTL interface, USB cable included                             | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                   |                €60.45 | Yes        |
+| 15× X3P JST–JST cables, 100 mm — 12 inter-servo, 1 PCB-to-U2D2, 2 spare | [MYBOTSHOP — DYNAMIXEL Cable X3P 100mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-100mm)                        |                €44.62 | Yes        |
+| 7× X3P JST–JST cables, 180 mm — 6 legs to PCB, 1 spare                  | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €27.88 | Yes        |
+| 1× AC/DC power supply, EU mains cord included                           | [Weishuo — 12 V / 20 A / 250 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €33 | Yes        |
 | 1× RGB-D camera                                                         | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
 | 1× LiDAR, USB adapter and USB cable included                            | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
-| **DEVELOPMENT SUBTOTAL**                                                |                                                                                                                    | **€844.39 estimated** |            |
+| **DEVELOPMENT SUBTOTAL**                                                |                                                                                                                    | **€857.39 estimated** |            |
 | ----                                                                    | ----                                                                                                               |                  ---- | ----       |
 | **ONBOARD HARDWARE AND MECHANICAL DESIGN — LATER**                      |                                                                                                                    |                       |            |
 | Onboard computer                                                        | TBD                                                                                                                |                   TBD | No         |
@@ -104,4 +104,4 @@ I can now make a list of the hardware I'll need for the next steps:
 | Main chassis and six legs                                               | Custom design                                                                                                      |                   TBD | No         |
 | Servo mounts and sensor brackets                                        | Custom design / TBD                                                                                                |                   TBD | No         |
 | Screws, nuts, bearings and spacers                                      | TBD                                                                                                                |                   TBD | No         |
-| **PROVISIONAL TOTAL**                                                   | **Excluding TBD items and shipping**                                                                               | **€844.39 estimated** |            |
+| **PROVISIONAL TOTAL**                                                   | **Excluding TBD items and shipping**                                                                               | **€857.39 estimated** |            |
