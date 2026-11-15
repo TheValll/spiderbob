@@ -130,36 +130,45 @@ I used [Fusion 360](https://fusion-360.fr/) to build a first hexapod prototype w
 
 #### Provisional materials
 
-With this 3D prototype, I have 9 unique parts to print. The goal of this step is to research which material I'll use to print each of them.
+With this 3D prototype, I have 10 unique parts to print. The goal of this step is to research which material I'll use to print each of them.
 
-| Part           | Quantity | Material |
-| -------------- | -------: | -------- |
-| Bottom plate   |        1 | PETG     |
-| Mid plate      |        1 | PETG     |
-| Cover          |        1 | PETG     |
-| Camera bracket |        1 | PETG     |
-| Standoff       |        4 | PETG     |
-| Coxa bracket   |        6 | PETG-CF  |
-| Femur bracket  |        6 | PETG-CF  |
-| Tibia          |        6 | PETG-CF  |
-| Foot           |        6 | TPU 95A  |
+| Part          | Quantity | Material |
+| ------------- | -------: | -------- |
+| Bottom plate  |        1 | PETG     |
+| Mid plate     |        1 | PETG     |
+| Cover         |        1 | PETG     |
+| Camera base   |        1 | PETG     |
+| Camera cradle |        1 | PETG     |
+| Standoff      |        4 | PETG     |
+| Coxa bracket  |        6 | PETG-CF  |
+| Femur bracket |        6 | PETG-CF  |
+| Tibia         |        6 | PETG-CF  |
+| Foot          |        6 | TPU 95A  |
 
 #### Provisional screws and nuts
 
 Counted on the 3D model, which now includes every screw.
 
-| Type       | Quantity | Reference | Price |
-| ---------- | -------: | --------- | ----: |
-| M2 × 6     |      144 |           |       |
-| M2.5 × 6   |       76 |           |       |
-| M3 × 6     |        2 |           |       |
-| M3 × 10    |        6 |           |       |
-| M3 × 45    |        4 |           |       |
-| M3 hex nut |       10 |           |       |
+| Type                | Quantity | Reference | Price |
+| ------------------- | -------: | --------- | ----: |
+| M2 × 6              |      144 |           |       |
+| M2.5 × 6            |       76 |           |       |
+| M3 × 6              |        2 |           |       |
+| M3 × 10             |        6 |           |       |
+| M3 × 12             |        4 |           |       |
+| M3 × 45             |        4 |           |       |
+| M3 hex nut          |       10 |           |       |
+| M3 nylon-insert nut |        4 |           |       |
+
+#### Adjustable camera mount
+
+The RealSense is held by two printed parts: a fixed base screwed on the mid plate, and a cradle screwed to the back of the camera. The cradle pivots on two M3 screws at the bottom-back edge of the camera, so tilting it down moves the camera forward, away from the shell. Two other M3 screws slide in arc slots in the base and clamp the cradle at any angle from 0 deg (horizontal) to 30 deg down, with ticks every 5 deg on the base. The default angle is 12 deg down. Both parts print without supports: the base on its foot, the cradle on its back plate.
+
+With the camera at any angle, a front leg swung fully forward (55 deg) must not lift its femur above -58 deg, otherwise it touches the camera. At 45 deg forward the limit is -74 deg, and below 35 deg forward the femur is free.
 
 #### Provisional limits
 
-Degrees and radians from the default (standing) pose, with a 3 deg safety margin before the first self-collision measured in the 3D model. C = coxa, F = femur, T = tibia servo.
+Degrees and radians from the default (standing) pose, with a 3 deg safety margin before the first self-collision measured in the 3D model. The femur is limited to +75 deg down by the 100 mm femur to tibia cable (it would need 105 mm at the +116 deg collision limit). C = coxa, F = femur, T = tibia servo.
 
 Top view, coxa limits (+ = counter-clockwise seen from above):
 
@@ -185,7 +194,7 @@ Top view, coxa limits (+ = counter-clockwise seen from above):
 Side view of one leg, femur and tibia limits (same for all six legs):
 
 ```
-              F: -86 deg (-1.501 rad) up / +116 deg (+2.025 rad) down
+              F: -86 deg (-1.501 rad) up / +75 deg (+1.309 rad) down
                           |
   BODY ===[C]============[F]============[T]
                                           \
