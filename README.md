@@ -80,28 +80,38 @@ I can now make a list of the hardware I'll need for the next steps:
 
 #### Hardware List
 
-| Component                                                               | Reference                                                                                                          |                 Price | Purchased? |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------: | ---------- |
-| **DESKTOP DEVELOPMENT**                                                 |                                                                                                                    |                       |            |
-| 18× Servomotors                                                         | [ROBOTIS Dynamixel XL430-W250-T](https://docs.robotis.com/docs/dxl/model_reference/x_series/xl_series/xl430-w250/) |               €320.00 | Yes        |
-| 1× Seven-port distribution PCB                                          | Custom PCB — 12 V / 20 A, XT60 or screw-terminal input, 2 capacitors                                               |                €73.35 | Yes        |
-| 1× USB-to-TTL interface, USB cable included                             | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                   |                €60.45 | Yes        |
-| 15× X3P JST–JST cables, 100 mm — 12 inter-servo, 1 PCB-to-U2D2, 2 spare | [MYBOTSHOP — DYNAMIXEL Cable X3P 100mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-100mm)                        |                €44.62 | Yes        |
-| 7× X3P JST–JST cables, 180 mm — 6 legs to PCB, 1 spare                  | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €27.88 | Yes        |
-| 1× AC/DC power supply, EU mains cord included                           | [Weishuo — 12 V / 20 A / 250 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €33 | Yes        |
-| 1× RGB-D camera                                                         | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
-| 1× LiDAR, USB adapter and USB cable included                            | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
-| **DEVELOPMENT SUBTOTAL**                                                |                                                                                                                    | **€857.39 estimated** |            |
-| ----                                                                    | ----                                                                                                               |                  ---- | ----       |
-| **ONBOARD HARDWARE AND MECHANICAL DESIGN — LATER**                      |                                                                                                                    |                       |            |
-| Onboard computer                                                        | TBD                                                                                                                |                   TBD | No         |
-| Battery                                                                 | TBD                                                                                                                |                   TBD | No         |
-| Compatible battery charger                                              | TBD                                                                                                                |                   TBD | No         |
-| Battery-to-PCB power cable                                              | XT60 or terminal connection — TBD                                                                                  |                   TBD | No         |
-| Voltage regulators for computer and sensors                             | TBD                                                                                                                |                   TBD | No         |
-| Main DC power switch                                                    | TBD                                                                                                                |                   TBD | No         |
-| Fuse and holder                                                         | Selection deferred to battery integration                                                                          |                   TBD | No         |
-| Main chassis and six legs                                               | Custom design                                                                                                      |                   TBD | No         |
-| Servo mounts and sensor brackets                                        | Custom design / TBD                                                                                                |                   TBD | No         |
-| Screws, nuts, bearings and spacers                                      | TBD                                                                                                                |                   TBD | No         |
-| **PROVISIONAL TOTAL**                                                   | **Excluding TBD items and shipping**                                                                               | **€857.39 estimated** |            |
+| Component                                          | Reference                                                                                                          |                 Price | Purchased? |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------: | ---------- |
+| **DESKTOP DEVELOPMENT**                            |                                                                                                                    |                       |            |
+| 18× Servomotors                                    | [ROBOTIS Dynamixel XL430-W250-T](https://docs.robotis.com/docs/dxl/model_reference/x_series/xl_series/xl430-w250/) |               €320.00 | Yes        |
+| 1× Seven-port distribution PCB                     | Custom PCB — 12 V / 20 A, XT60 or screw-terminal input, 2 capacitors                                               |                €73.35 | Yes        |
+| 1× USB-to-TTL interface                            | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                   |                €60.45 | Yes        |
+| 15× X3P JST–JST cables, 100 mm                     | [MYBOTSHOP — DYNAMIXEL Cable X3P 100mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-100mm)                        |                €44.62 | Yes        |
+| 7× X3P JST–JST cables, 180 mm                      | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €27.88 | Yes        |
+| 1× AC/DC power supply                              | [Weishuo — 12 V / 20 A / 240 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €33 | Yes        |
+| 1× RGB-D camera                                    | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
+| 1× LiDAR, USB adapter                              | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
+| **DEVELOPMENT SUBTOTAL**                           |                                                                                                                    | **€857.39 estimated** |            |
+| ----                                               | ----                                                                                                               |                  ---- | ----       |
+| **ONBOARD HARDWARE AND MECHANICAL DESIGN — LATER** |                                                                                                                    |                       |            |
+| Onboard computer                                   | TBD                                                                                                                |                   TBD | No         |
+| Battery                                            | TBD                                                                                                                |                   TBD | No         |
+| Compatible battery charger                         | TBD                                                                                                                |                   TBD | No         |
+| Battery-to-PCB power cable                         | XT60 or terminal connection — TBD                                                                                  |                   TBD | No         |
+| Voltage regulators for computer and sensors        | TBD                                                                                                                |                   TBD | No         |
+| Main DC power switch                               | TBD                                                                                                                |                   TBD | No         |
+| Fuse and holder                                    | Selection deferred to battery integration                                                                          |                   TBD | No         |
+| Main chassis and six legs                          | Custom design                                                                                                      |                   TBD | No         |
+| Servo mounts and sensor brackets                   | Custom design / TBD                                                                                                |                   TBD | No         |
+| Screws, nuts, bearings and spacers                 | TBD                                                                                                                |                   TBD | No         |
+| **PROVISIONAL TOTAL**                              | **Excluding TBD items and shipping**                                                                               | **€857.39 estimated** |            |
+
+#### Dimensions and 3D Models
+
+| Component                      | Dimensions (W × H × D)            | Weight      | 3D files                                                                 |
+| ------------------------------ | --------------------------------- | ----------- | ------------------------------------------------------------------------ |
+| ROBOTIS Dynamixel XL430-W250-T | 28.5 × 46.5 × 34 mm               | 57.2 g each | [STEP](modelisations/components/ROBOTIS_XL430-W250-T.stp)                |
+| Seven-port distribution PCB    | 62.6 × 60 × 23 mm with components | —           | [STEP](modelisations/components/Custom_7-port-distribution-PCB.step)     |
+| ROBOTIS U2D2                   | 48 × 18 × 14.9 mm                 | 9 g         | [STEP (USB-C revision)](modelisations/components/ROBOTIS_U2D2.stp)       |
+| Intel RealSense D435i          | 90 × 25 × 25 mm                   | 72g         | [DAE](modelisations/components/Intel_RealSense-D435i.dae)                |
+| SLAMTEC RPLIDAR C1             | 55.6 × 55.6 × 41.3 mm             | 110 g       | [STEP (dev kit)](modelisations/components/SLAMTEC_RPLIDAR-C1_devkit.stp) |
