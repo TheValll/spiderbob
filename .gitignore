@@ -49,3 +49,6 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+
+# Fusion 360 build/animation scripts
+modelisations/fusion/

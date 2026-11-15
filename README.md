@@ -61,7 +61,7 @@ After a few hours of research, I found four possible ways to power the 18 servos
 
 For initial testing, I will try option 1 and monitor current draw and temperature while waiting for Tribotix's reply. If the current limits become a problem, I will consider options 3 and 4.
 
-### 12/13/2026
+### 11/14/2026
 
 Today, I discovered the world of PCB design, so I decided to give option 3 a try. I spent some time learning [EasyEDA](https://easyeda.com/) and designed my own power distribution board with seven TTL ports and a planned capacity of 12 V / 20 A.
 
@@ -87,11 +87,12 @@ I can now make a list of the hardware I'll need for the next steps:
 | 1× Seven-port distribution PCB                     | Custom PCB — 12 V / 20 A, XT60 or screw-terminal input, 2 capacitors                                               |                €73.35 | Yes        |
 | 1× USB-to-TTL interface                            | [ROBOTIS U2D2 — 902-0132-000](https://www.gotronic.fr/art-carte-de-programmation-u2d2-30363.htm)                   |                €60.45 | Yes        |
 | 15× X3P JST–JST cables, 100 mm                     | [MYBOTSHOP — DYNAMIXEL Cable X3P 100mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-100mm)                        |                €44.62 | Yes        |
-| 7× X3P JST–JST cables, 180 mm                      | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €27.88 | Yes        |
+| 10× X3P JST–JST cables, 180 mm                     | [MYBOTSHOP — DYNAMIXEL Cable X3P 180mm](https://www.mybotshop.de/?a=7380&lang=eng)                                 |                €39.83 | Yes        |
+| 5× X3P JST–JST cables, 300 mm                      | [MYBOTSHOP — DYNAMIXEL Cable X3P 300mm](https://www.mybotshop.de/DYNAMIXEL-Cable-X3P-300mm_1)                      |                €30.00 | Yes        |
 | 1× AC/DC power supply                              | [Weishuo — 12 V / 20 A / 240 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €33 | Yes        |
 | 1× RGB-D camera                                    | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
 | 1× LiDAR, USB adapter                              | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
-| **DEVELOPMENT SUBTOTAL**                           |                                                                                                                    | **€857.39 estimated** |            |
+| **DEVELOPMENT SUBTOTAL**                           |                                                                                                                    | **€899.34 estimated** |            |
 | ----                                               | ----                                                                                                               |                  ---- | ----       |
 | **ONBOARD HARDWARE AND MECHANICAL DESIGN — LATER** |                                                                                                                    |                       |            |
 | Onboard computer                                   | TBD                                                                                                                |                   TBD | No         |
@@ -104,7 +105,7 @@ I can now make a list of the hardware I'll need for the next steps:
 | Main chassis and six legs                          | Custom design                                                                                                      |                   TBD | No         |
 | Servo mounts and sensor brackets                   | Custom design / TBD                                                                                                |                   TBD | No         |
 | Screws, nuts, bearings and spacers                 | TBD                                                                                                                |                   TBD | No         |
-| **PROVISIONAL TOTAL**                              | **Excluding TBD items and shipping**                                                                               | **€857.39 estimated** |            |
+| **PROVISIONAL TOTAL**                              | **Excluding TBD items and shipping**                                                                               | **€899.34 estimated** |            |
 
 #### Dimensions and 3D Models
 
@@ -115,3 +116,17 @@ I can now make a list of the hardware I'll need for the next steps:
 | ROBOTIS U2D2                   | 48 × 18 × 14.9 mm                 | 9 g         | [STEP (USB-C revision)](modelisations/components/ROBOTIS_U2D2.stp)       |
 | Intel RealSense D435i          | 90 × 25 × 25 mm                   | 72g         | [DAE](modelisations/components/Intel_RealSense-D435i.dae)                |
 | SLAMTEC RPLIDAR C1             | 55.6 × 55.6 × 41.3 mm             | 110 g       | [STEP (dev kit)](modelisations/components/SLAMTEC_RPLIDAR-C1_devkit.stp) |
+
+### 11/15/2026
+
+#### Electrical and project diagrams
+
+Today, I took some time to draw the electrical schematic and an overview of the whole project.
+
+#### 3D hexapod prototype
+
+After a few Google searches, I found 3D models of all the components I need for development. Having those models helped me a lot when I started building the hexapod in 3D.
+
+I used [Fusion 360](https://fusion-360.fr/) to build a first hexapod prototype with AI and see what Claude Opus 5.5 could do through MCP. With the 3D models as context, Claude came up with a first look that was exactly what I wanted: cool without looking scary.
+
+![First hexapod prototype](schemas/schema5.gif)
