@@ -175,33 +175,32 @@ Top view, coxa limits (+ = counter-clockwise seen from above):
 
 ```
                                FRONT
-  FL  C: -35/+55 deg                     FR  C: -55/+35 deg
-         -0.611/+0.960 rad                      -0.960/+0.611 rad
+  FL  C: -58/+58 deg                     FR  C: -58/+58 deg
+         -1.012/+1.012 rad                      -1.012/+1.012 rad
                 [C]                              [C]
                    \                            /
                     +--------------------------+
                     |                          |
  ML [C]-------------|        SPIDERBOB         |-------------[C] MR
- C: -55/+55 deg     |        (top view)        |  C: -55/+55 deg
- -0.960/+0.960 rad  |                          |  -0.960/+0.960 rad
+ C: -58/+58 deg     |        (top view)        |  C: -58/+58 deg
+ -1.012/+1.012 rad  |                          |  -1.012/+1.012 rad
                     +--------------------------+
                    /                            \
                 [C]                              [C]
-  BL  C: -55/+55 deg                     BR  C: -55/+55 deg
-         -0.960/+0.960 rad                      -0.960/+0.960 rad
+  BL  C: -58/+58 deg                     BR  C: -58/+58 deg
+         -1.012/+1.012 rad                      -1.012/+1.012 rad
                                REAR
 ```
 
 Side view of one leg, femur and tibia limits (same for all six legs):
 
 ```
-              F: -86 deg (-1.501 rad) up / +75 deg (+1.309 rad) down
-                 front legs: -75 deg (-1.309 rad) up
+              F: -83 deg (-1.449 rad) up / +78 deg (+1.361 rad) down
                           |
   BODY ===[C]============[F]============[T]
                                           \
-                                           \    T: -147 deg (-2.566 rad) unfold
-                                            \       +47 deg (+0.820 rad) fold
+                                           \    T: -160 deg (-2.793 rad) unfold
+                                            \       +32 deg (+0.559 rad) fold
                                              \
                                               O  foot
 ```
@@ -210,17 +209,30 @@ Side view of one leg, femur and tibia limits (same for all six legs):
 
 | Item                                             | Mass            |
 | ------------------------------------------------ | --------------- |
-| Printed parts (normal infill)                    | ~0.65 kg        |
+| Printed parts (from the model volumes, 20–40 % infill; the plates, shell and brackets are thin, so almost solid) | ~0.8 kg (0.76–0.92 kg) |
 | 18× Dynamixel XL430 servos                       | 1.03 kg         |
 | Camera, LiDAR, U2D2, PCB, cables and screws      | ~0.36 kg        |
-| **Current subtotal**                             | **~2.0 kg**     |
-| Battery (3S 5000 mAh) and onboard computer added | **~2.5–2.8 kg** |
+| **Current subtotal**                             | **~2.2 kg**     |
+| Battery (3S 5000 mAh) and onboard computer added | **~2.7–3.0 kg** |
+
+#### Estimated servo torque
+
+Quasi-static estimate for a 3 kg robot, worst leg at each moment. XL430 at 12 V: 1.5 N·m stall, about 1.27 N·m with the PWM limited to 85 %.
+
+| Movement                  | Max femur torque | % of the 85 % limit | Max current per leg |
+| ------------------------- | ---------------: | ------------------: | ------------------: |
+| Standing                  |         0.27 N·m |                21 % |              0.44 A |
+| Tripod walk               |         0.70 N·m |                55 % |              0.86 A |
+| Ripple walk               |         0.48 N·m |                38 % |              0.66 A |
+| Turn in place             |         0.69 N·m |                54 % |              0.85 A |
+| Climbing a 50 mm step     |         0.48 N·m |                38 % |              0.92 A |
+| Getting up from lying     |         0.50 N·m |                39 % |              1.01 A |
 
 #### Standing pose
 
 | Joint  |       Angle | Radians |
 | ------ | ----------: | ------: |
 | Coxa   |       0 deg |   0.000 |
-| Femur  |     −20 deg |  −0.349 |
-| Tibia  |     +95 deg |  +1.658 |
+| Femur  |     −23 deg |  −0.401 |
+| Tibia  |    +110 deg |  +1.920 |
 | Camera | 10 deg down |   0.175 |
