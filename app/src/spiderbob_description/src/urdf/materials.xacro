@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="spiderbob">
+  <material name="SpiderBob_PCB">
+    <color rgba="0.9647058823529412 0.9647058823529412 0.9529411764705882 1.0"/>
+  </material>
+  <material name="SpiderBob_XL430">
+    <color rgba="0.9647058823529412 0.9647058823529412 0.9529411764705882 1.0"/>
+  </material>
+  <material name="SpiderBob_D435i">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="SpiderBob_RPLIDAR_C1">
+    <color rgba="0.9647058823529412 0.9647058823529412 0.9529411764705882 1.0"/>
+  </material>
+  <material name="SpiderBob_printed">
+    <color rgba="0.9647058823529412 0.9647058823529412 0.9529411764705882 1.0"/>
+  </material>
+  <material name="Steel">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="SpiderBob_U2D2">
+    <color rgba="0.9647058823529412 0.9647058823529412 0.9529411764705882 1.0"/>
+  </material>
+  <xacro:property name="existing_contact_coefficients" value="[]"/>
+</robot>

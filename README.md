@@ -114,6 +114,20 @@ I can now make a list of the hardware I'll need for the next steps:
 | Intel RealSense D435i          | 90 × 25 × 25 mm                   | 72g         | [DAE](modelisations/components/Intel_RealSense-D435i.dae)                |
 | SLAMTEC RPLIDAR C1             | 55.6 × 55.6 × 41.3 mm             | 110 g       | [STEP (dev kit)](modelisations/components/SLAMTEC_RPLIDAR-C1_devkit.stp) |
 
+#### Servo bus ports
+
+Port 1 of the custom PCB has no 12 V on its power pin: it is the U2D2 input (PC → USB → U2D2 → CN1). The six powered ports go to the legs. The PCB is mounted with its XT60 battery input towards the rear of the robot; the battery lead comes up from the bottom bay through a hole in the mid plate just behind it.
+
+| PCB port | Connected to |  Cable |
+| -------- | ------------ | -----: |
+| CN1      | U2D2 (TTL)   | 100 mm |
+| CN2      | Rear right   | 180 mm |
+| CN3      | Middle right | 180 mm |
+| CN4      | Front right  | 300 mm |
+| CN5      | Front left   | 300 mm |
+| CN6      | Middle left  | 180 mm |
+| CN7      | Rear left    | 180 mm |
+
 ### 11/15/2026
 
 #### Electrical and project diagrams
@@ -139,7 +153,7 @@ With this 3D prototype, I have 10 unique parts to print. The goal of this step i
 | Cover         |        1 | PETG     |
 | Camera base   |        1 | PETG     |
 | Camera cradle |        1 | PETG     |
-| Standoff      |        4 | PETG     |
+| Standoff      |        8 | PETG     |
 | Coxa bracket  |        6 | PETG-CF  |
 | Femur bracket |        6 | PETG-CF  |
 | Tibia         |        6 | PETG-CF  |
@@ -154,11 +168,13 @@ Counted on the 3D model, which now includes every screw.
 | M2 × 6              |      144 |           |       |
 | M2.5 × 6            |       76 |           |       |
 | M3 × 6              |        2 |           |       |
-| M3 × 10             |        6 |           |       |
+| M3 × 10             |        2 |           |       |
+| M3 × 12             |        4 |           |       |
 | M3 × 16             |        2 |           |       |
-| M3 × 45             |        4 |           |       |
-| M3 hex nut          |       10 |           |       |
+| M3 × 45             |        8 |           |       |
+| M3 hex nut          |       14 |           |       |
 | M3 nylon-insert nut |        2 |           |       |
+| M3 spacer Ø5 × 6    |        1 |           |       |
 
 #### Adjustable camera mount
 
@@ -207,26 +223,26 @@ Side view of one leg, femur and tibia limits (same for all six legs):
 
 #### Estimated mass
 
-| Item                                             | Mass            |
-| ------------------------------------------------ | --------------- |
+| Item                                                                                                             | Mass                   |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------- |
 | Printed parts (from the model volumes, 20–40 % infill; the plates, shell and brackets are thin, so almost solid) | ~0.8 kg (0.76–0.92 kg) |
-| 18× Dynamixel XL430 servos                       | 1.03 kg         |
-| Camera, LiDAR, U2D2, PCB, cables and screws      | ~0.36 kg        |
-| **Current subtotal**                             | **~2.2 kg**     |
-| Battery (3S 5000 mAh) and onboard computer added | **~2.7–3.0 kg** |
+| 18× Dynamixel XL430 servos                                                                                       | 1.03 kg                |
+| Camera, LiDAR, U2D2, PCB, cables and screws                                                                      | ~0.36 kg               |
+| **Current subtotal**                                                                                             | **~2.2 kg**            |
+| Battery (3S 5000 mAh) and onboard computer added                                                                 | **~2.7–3.0 kg**        |
 
 #### Estimated servo torque
 
 Quasi-static estimate for a 3 kg robot, worst leg at each moment. XL430 at 12 V: 1.5 N·m stall, about 1.27 N·m with the PWM limited to 85 %.
 
-| Movement                  | Max femur torque | % of the 85 % limit | Max current per leg |
-| ------------------------- | ---------------: | ------------------: | ------------------: |
-| Standing                  |         0.27 N·m |                21 % |              0.44 A |
-| Tripod walk               |         0.70 N·m |                55 % |              0.86 A |
-| Ripple walk               |         0.48 N·m |                38 % |              0.66 A |
-| Turn in place             |         0.69 N·m |                54 % |              0.85 A |
-| Climbing a 50 mm step     |         0.48 N·m |                38 % |              0.92 A |
-| Getting up from lying     |         0.50 N·m |                39 % |              1.01 A |
+| Movement              | Max femur torque | % of the 85 % limit | Max current per leg |
+| --------------------- | ---------------: | ------------------: | ------------------: |
+| Standing              |         0.29 N·m |                23 % |              0.48 A |
+| Tripod walk           |         0.75 N·m |                59 % |              0.95 A |
+| Ripple walk           |         0.52 N·m |                41 % |              0.72 A |
+| Turn in place         |         0.74 N·m |                58 % |              0.94 A |
+| Climbing a 50 mm step |         0.56 N·m |                44 % |              1.03 A |
+| Getting up from lying |         0.50 N·m |                39 % |              1.01 A |
 
 #### Standing pose
 
