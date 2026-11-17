@@ -7,7 +7,24 @@ SPIDERBOB - A FAIRE
    - Si OK : le reste des pieces
 
 2. Vis
-   - Trouver references et prix (tableau du README)
+   - Trouver references et prix
+   - A acheter maintenant (sures) - tete cylindrique 6 pans creux ISO 4762, acier zingue ou inox A2 :
+
+     | Vis / piece               | Qte  | A prendre   | Usage                                   |
+     |---------------------------|------|-------------|-----------------------------------------|
+     | M2 x 6                    | 144  | boite 200   | palonniers et cotes libres des servos   |
+     | M2.5 x 6                  | 4    | sachet 10   | LiDAR                                   |
+     | M3 x 6                    | 2    | sachet 10   | camera                                  |
+     | M3 x 10                   | 2    | sachet 10   | support camera                          |
+     | M3 x 12                   | 4    | sachet 10   | capot                                   |
+     | M3 x 16                   | 2    | sachet 10   | pivot camera                            |
+     | M3 x 45                   | 8    | sachet 10   | entretoises entre les plaques           |
+     | Ecrou M3 (ISO 4032)       | 14   | sachet 20   | entretoises, capot, support camera      |
+     | Ecrou M3 nylstop (ISO 10511) | 2 | sachet 10   | pivot camera                            |
+     | Entretoise lisse D5 x 6 mm, trou M3 | 1 | sachet 10 | pivot camera                     |
+
+   - PAS ENCORE : 72 vis de boitier des servos (M2.6 x 6 autotaraudeuse tete basse ou M2.5 x 6) -> tester sur un servo d'abord
+     -> acheter 1 petit sachet de chaque (tete basse, 6 mm max) pour le test
 
 3. Batterie
    - 3S LiPo ~5000 mAh softcase, max 200 x 52 x 33 mm, prise XT60
