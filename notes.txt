@@ -1,0 +1,20 @@
+SPIDERBOB - A FAIRE
+
+1. Imprimer
+   - 1 patte complete : CoxaBracket, FemurBracket, Tibia (PETG-CF) + Foot (TPU 95A)
+   - Les 3 echantillons (stl/samples) : Sample_rail_coxa, Sample_nut_traps, Sample_lidar_template
+   - Verifier : servo entre les rails, vis du boitier (M2.6 vs M2.5), ecrou dans 5.6/5.7/5.8, trous du LiDAR
+   - Si OK : le reste des pieces
+
+2. Vis
+   - Trouver references et prix (tableau du README)
+
+3. Batterie
+   - 3S LiPo ~5000 mAh softcase, max 200 x 52 x 33 mm, prise XT60
+
+4. Buck-boost (si Jetson)
+   - Sortie 12 ou 19 V, 5 A min, a placer devant la batterie (~45 x 52 x 32 mm)
+
+5. Ne pas oublier
+   - Batterie -> porte-fusible XT60 (fusible lame 15-20 A) -> interrupteur XT60 (>= 30 A) -> PCB, sans soudure
+   - Alarme LiPo, chargeur 3S, double-face

@@ -1,10 +1,12 @@
 <launch>
-  <!-- RViz with sliders for the 19 joints. Zero = straight legs; standing pose: femur -0.401, tibia +1.920 -->
+  <!-- RViz with sliders for the 18 leg joints. Zero = straight legs; standing pose: femur -0.401, tibia +1.920 -->
+  <!-- camera mount notch, degrees down: 0, 10, 20 or 30 (fixed joint in the URDF) -->
+  <arg name="camera_tilt_deg" default="10" />
   <let name="urdf_path" value="$(find-pkg-share spiderbob_description)/src/urdf/spiderbob.xacro" />
   <let name="rviz_config_path" value="$(find-pkg-share spiderbob_description)/rviz/urdf_config.rviz" />
 
   <node pkg="robot_state_publisher" exec="robot_state_publisher">
-    <param name="robot_description" value="$(command 'xacro $(var urdf_path)')" />
+    <param name="robot_description" value="$(command 'xacro $(var urdf_path) camera_tilt_deg:=$(var camera_tilt_deg)')" />
   </node>
 
   <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" />

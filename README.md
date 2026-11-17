@@ -100,8 +100,9 @@ I can now make a list of the hardware I'll need for the next steps:
 | Compatible battery charger                  | TBD                                                                                                                |                   TBD | No         |
 | Battery-to-PCB power cable                  | XT60 or terminal connection — TBD                                                                                  |                   TBD | No         |
 | Voltage regulators for computer and sensors | TBD                                                                                                                |                   TBD | No         |
-| Main DC power switch                        | TBD                                                                                                                |                   TBD | No         |
-| Fuse and holder                             | Selection deferred to battery integration                                                                          |                   TBD | No         |
+| Main DC power switch                        | XT60 inline switch, ≥ 30 A, between the fuse and the PCB (plug-in, no soldering)                                   |                   TBD | No         |
+| Fuse and holder                             | XT60 inline blade-fuse holder right after the battery, 15–20 A blade fuse                                          |                   TBD | No         |
+| LiPo low-voltage alarm                      | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   TBD | No         |
 | **PROVISIONAL TOTAL**                       | **Excluding TBD items and shipping**                                                                               | **€899.34 estimated** |            |
 
 #### Dimensions and 3D Models
@@ -159,22 +160,31 @@ With this 3D prototype, I have 10 unique parts to print. The goal of this step i
 | Tibia         |        6 | PETG-CF  |
 | Foot          |        6 | TPU 95A  |
 
+Test samples for the first print order, with one complete leg (STL in `modelisations/hexapode/stl/samples`):
+
+| Sample         | Material | Checks                                                                       |
+| -------------- | -------- | ---------------------------------------------------------------------------- |
+| Coxa rail      | PETG     | Servo fit between the rails, case screws, coxa arm clearance                 |
+| Nut traps      | PETG     | M3 nut in hex traps of 5.6, 5.7 and 5.8 mm (1, 2 and 3 marks): keep the best |
+| LiDAR template | PETG     | LiDAR pocket and its 4 holes on the 43 × 43 mm square                        |
+
 #### Provisional screws and nuts
 
-Counted on the 3D model, which now includes every screw.
+Counted on the 3D model. The PCB and the U2D2 are held with double-sided tape, without screws. Used servos come without their screws.
 
-| Type                | Quantity | Reference | Price |
-| ------------------- | -------: | --------- | ----: |
-| M2 × 6              |      144 |           |       |
-| M2.5 × 6            |       76 |           |       |
-| M3 × 6              |        2 |           |       |
-| M3 × 10             |        2 |           |       |
-| M3 × 12             |        4 |           |       |
-| M3 × 16             |        2 |           |       |
-| M3 × 45             |        8 |           |       |
-| M3 hex nut          |       14 |           |       |
-| M3 nylon-insert nut |        2 |           |       |
-| M3 spacer Ø5 × 6    |        1 |           |       |
+| Type                                                                 | Quantity | Reference | Price |
+| -------------------------------------------------------------------- | -------: | --------- | ----: |
+| M2 × 6 (horns and idlers)                                            |      144 |           |       |
+| M2.6 × 6 self-tapping, low head (servo cases, test on a servo first) |       72 |           |       |
+| M2.5 × 6 socket head (LiDAR)                                         |        4 |           |       |
+| M3 × 6                                                               |        2 |           |       |
+| M3 × 10                                                              |        2 |           |       |
+| M3 × 12                                                              |        4 |           |       |
+| M3 × 16                                                              |        2 |           |       |
+| M3 × 45                                                              |        8 |           |       |
+| M3 hex nut                                                           |       14 |           |       |
+| M3 nylon-insert nut                                                  |        2 |           |       |
+| M3 spacer Ø5 × 6                                                     |        1 |           |       |
 
 #### Adjustable camera mount
 

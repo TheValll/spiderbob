@@ -1,13 +1,16 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="spiderbob">
   <xacro:property name="package_name" value="spiderbob_description"/>
+  <xacro:arg name="camera_tilt_deg" default="10"/>
+  <xacro:property name="camera_tilt_deg" value="$(arg camera_tilt_deg)"/>
+  <xacro:property name="camera_tilt" value="${camera_tilt_deg * pi / 180}"/>
   <xacro:include filename="$(find ${package_name})/src/urdf/materials.xacro"/>
   <xacro:include filename="$(find ${package_name})/src/urdf/gazebo.xacro"/>
   <link name="base_link">
     <inertial>
-      <origin xyz="-2.5846373708e-03 2.6425386374e-05 2.0389344482e-02" rpy="0.0 0.0 0.0"/>
-      <mass value="9.3629476653e-01"/>
-      <inertia ixx="3.4227170333e-03" iyy="6.1060163265e-03" izz="7.2678804143e-03" ixy="3.7419824594e-06" iyz="-2.1849174589e-07" ixz="4.9037057926e-05"/>
+      <origin xyz="-2.5683172064e-03 2.6309873752e-05 2.0423956912e-02" rpy="0.0 0.0 0.0"/>
+      <mass value="9.4192876973e-01"/>
+      <inertia ixx="3.4410991662e-03" iyy="6.1202774540e-03" izz="7.2877425748e-03" ixy="3.7553421084e-06" iyz="-2.1663108289e-07" ixz="4.9174641277e-05"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -17,18 +20,84 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/base_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.2610 0.1580 0.0390"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.000000 0.088250 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0400 0.0185 0.0390"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.000000 -0.088250 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0400 0.0185 0.0390"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000126 0.000000 0.051250" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.2197 0.1330 0.0635"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.107500 0.000000 0.036881" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0230 0.0668 0.0348"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.106515 0.053515 0.000450" rpy="0.000000 0.000000 -0.785398"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000000 0.070000 0.000450" rpy="0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.106515 0.053515 0.000450" rpy="0.000000 0.000000 0.785398"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.106515 -0.053515 0.000450" rpy="0.000000 0.000000 2.356194"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000000 -0.070000 0.000450" rpy="0.000000 0.000000 -3.141593"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.106515 -0.053515 0.000450" rpy="0.000000 0.000000 -2.356194"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.000000 0.000000 0.095650" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <cylinder radius="0.0278" length="0.0413"/>
       </geometry>
     </collision>
   </link>
 
   <link name="FL_coxa_link">
     <inertial>
-      <origin xyz="3.9841159377e-02 4.0642389935e-04 9.1879486150e-05" rpy="0.0 0.0 0.0"/>
-      <mass value="7.4164051176e-02"/>
-      <inertia ixx="1.6043234687e-05" iyy="3.6459500729e-05" izz="3.4314315647e-05" ixy="-2.8751191911e-07" iyz="1.1261526114e-08" ixz="1.6563581299e-07"/>
+      <origin xyz="4.0118342431e-02 4.1004087736e-04 8.7624509307e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.3509848737e-02"/>
+      <inertia ixx="1.5149563429e-05" iyy="3.4882434195e-05" izz="3.3564913922e-05" ixy="-2.7915705560e-07" iyz="8.7562088752e-09" ixz="-1.2222775687e-08"/>
     </inertial>
     <visual>
       <origin xyz="-3.5527136788e-17 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -38,9 +107,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="-3.5527136788e-17 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FL_coxa_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0340 0.0440"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -55,27 +130,33 @@
 
   <link name="FL_femur_link">
     <inertial>
-      <origin xyz="4.0145528110e-02 4.9016410080e-04 8.8048240378e-06" rpy="0.0 0.0 0.0"/>
-      <mass value="7.3156083502e-02"/>
-      <inertia ixx="1.5468366589e-05" iyy="3.1544358830e-05" izz="3.7586097166e-05" ixy="-1.0858047859e-07" iyz="8.8078183621e-09" ixz="-1.2205264671e-08"/>
+      <origin xyz="4.0401550339e-02 4.1517337444e-04 8.8721308591e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.2601098063e-02"/>
+      <inertia ixx="1.4673146816e-05" iyy="3.0845009069e-05" izz="3.6113109040e-05" ixy="-2.7062059070e-07" iyz="8.7595148523e-09" ixz="-1.2040353984e-08"/>
     </inertial>
     <visual>
-      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="-3.5527136788e-17 4.4408920985e-18 7.8886090522e-33" rpy="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="file://$(find ${package_name})/src/meshes/FL_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FL_femur_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0440 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="FL_femur_joint" type="revolute">
-    <origin xyz="5.8750000000e-02 -2.2204460493e-17 8.8817841970e-18" rpy="-0.0 -0.0 0.0"/>
+    <origin xyz="5.8750000000e-02 -2.2204460493e-17 2.4424906542e-17" rpy="-0.0 -0.0 0.0"/>
     <parent link="FL_coxa_link"/>
     <child link="FL_femur_link"/>
     <axis xyz="0 1 0"/>
@@ -84,27 +165,39 @@
 
   <link name="FL_tibia_link">
     <inertial>
-      <origin xyz="5.8833015368e-02 1.5998913851e-04 5.2436683685e-04" rpy="0.0 0.0 0.0"/>
-      <mass value="5.1241386356e-02"/>
-      <inertia ixx="1.1435385570e-05" iyy="5.8513174190e-05" izz="6.5283642642e-05" ixy="3.0122665044e-07" iyz="-5.3036574828e-09" ixz="4.4618689070e-07"/>
+      <origin xyz="5.9531028834e-02 -2.8828617968e-10 5.1365806300e-04" rpy="0.0 0.0 0.0"/>
+      <mass value="5.1474491899e-02"/>
+      <inertia ixx="1.0397341267e-05" iyy="5.7770805824e-05" izz="6.3449001562e-05" ixy="3.8530857300e-13" iyz="-2.7682536513e-13" ixz="4.5736826022e-07"/>
     </inertial>
     <visual>
-      <origin xyz="-7.1054273576e-17 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="7.1054273576e-17 -1.7763568394e-17 -3.9443045261e-32" rpy="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="file://$(find ${package_name})/src/meshes/FL_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="-7.1054273576e-17 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.015500 -0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FL_tibia_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0570 0.0520 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.064250 -0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0405 0.0200 0.0160"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.100000 -0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0135"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="FL_tibia_joint" type="revolute">
-    <origin xyz="5.8750000000e-02 -8.8817841970e-18 1.4210854715e-16" rpy="0.0 -0.0 -0.0"/>
+    <origin xyz="5.8750000000e-02 3.9968028887e-17 1.4210854715e-16" rpy="0.0 0.0 -0.0"/>
     <parent link="FL_femur_link"/>
     <child link="FL_tibia_link"/>
     <axis xyz="0 1 0"/>
@@ -113,9 +206,9 @@
 
   <link name="ML_coxa_link">
     <inertial>
-      <origin xyz="3.9841159377e-02 4.0642389935e-04 9.1879486150e-05" rpy="0.0 0.0 0.0"/>
-      <mass value="7.4164051176e-02"/>
-      <inertia ixx="1.6043234687e-05" iyy="3.6459500729e-05" izz="3.4314315647e-05" ixy="-2.8751191911e-07" iyz="1.1261526114e-08" ixz="1.6563581299e-07"/>
+      <origin xyz="4.0118342431e-02 4.1004087736e-04 8.7624509307e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.3509848737e-02"/>
+      <inertia ixx="1.5149563429e-05" iyy="3.4882434195e-05" izz="3.3564913922e-05" ixy="-2.7915705560e-07" iyz="8.7562088752e-09" ixz="-1.2222775687e-08"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -125,9 +218,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/ML_coxa_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0340 0.0440"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -142,27 +241,33 @@
 
   <link name="ML_femur_link">
     <inertial>
-      <origin xyz="4.0145528110e-02 4.9016410080e-04 8.8048240378e-06" rpy="0.0 0.0 0.0"/>
-      <mass value="7.3156083502e-02"/>
-      <inertia ixx="1.5468366589e-05" iyy="3.1544358830e-05" izz="3.7586097166e-05" ixy="-1.0858047859e-07" iyz="8.8078183621e-09" ixz="-1.2205264671e-08"/>
+      <origin xyz="4.0401550339e-02 4.1517337444e-04 8.8721308591e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.2601098063e-02"/>
+      <inertia ixx="1.4673146816e-05" iyy="3.0845009069e-05" izz="3.6113109040e-05" ixy="-2.7062059070e-07" iyz="8.7595148523e-09" ixz="-1.2040353984e-08"/>
     </inertial>
     <visual>
-      <origin xyz="1.7763568394e-17 -9.8607613153e-34 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.0000000000e+00 3.9443045261e-33 7.8886090522e-33" rpy="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="file://$(find ${package_name})/src/meshes/ML_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="1.7763568394e-17 -9.8607613153e-34 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/ML_femur_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0440 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="ML_femur_joint" type="revolute">
-    <origin xyz="5.8750000000e-02 6.9025329207e-33 -5.9164567892e-33" rpy="0.0 -0.0 0.0"/>
+    <origin xyz="5.8750000000e-02 3.9443045261e-33 -7.8886090522e-33" rpy="-0.0 0.0 0.0"/>
     <parent link="ML_coxa_link"/>
     <child link="ML_femur_link"/>
     <axis xyz="0 1 0"/>
@@ -171,27 +276,39 @@
 
   <link name="ML_tibia_link">
     <inertial>
-      <origin xyz="5.8833015368e-02 1.5998913851e-04 5.2436683685e-04" rpy="0.0 0.0 0.0"/>
-      <mass value="5.1241386356e-02"/>
-      <inertia ixx="1.1435385570e-05" iyy="5.8513174190e-05" izz="6.5283642642e-05" ixy="3.0122665044e-07" iyz="-5.3036574828e-09" ixz="4.4618689070e-07"/>
+      <origin xyz="5.9531028834e-02 -2.8828616192e-10 5.1365806300e-04" rpy="0.0 0.0 0.0"/>
+      <mass value="5.1474491899e-02"/>
+      <inertia ixx="1.0397341267e-05" iyy="5.7770805824e-05" izz="6.3449001562e-05" ixy="3.8530857300e-13" iyz="-2.7682536513e-13" ixz="4.5736826022e-07"/>
     </inertial>
     <visual>
-      <origin xyz="0.0000000000e+00 -1.9721522631e-33 -3.9443045261e-33" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="file://$(find ${package_name})/src/meshes/ML_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 -1.9721522631e-33 -3.9443045261e-33" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.015500 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/ML_tibia_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0570 0.0520 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.064250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0405 0.0200 0.0160"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.100000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0135"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="ML_tibia_joint" type="revolute">
-    <origin xyz="5.8750000000e-02 9.8607613153e-34 7.1054273576e-17" rpy="-0.0 0.0 0.0"/>
+    <origin xyz="5.8750000000e-02 -1.1832913578e-32 -1.5777218104e-32" rpy="-0.0 0.0 -0.0"/>
     <parent link="ML_femur_link"/>
     <child link="ML_tibia_link"/>
     <axis xyz="0 1 0"/>
@@ -200,9 +317,9 @@
 
   <link name="BL_coxa_link">
     <inertial>
-      <origin xyz="3.9841159377e-02 4.0642389935e-04 9.1879486150e-05" rpy="0.0 0.0 0.0"/>
-      <mass value="7.4164051176e-02"/>
-      <inertia ixx="1.6043234687e-05" iyy="3.6459500729e-05" izz="3.4314315647e-05" ixy="-2.8751191911e-07" iyz="1.1261526114e-08" ixz="1.6563581299e-07"/>
+      <origin xyz="4.0118342431e-02 4.1004087736e-04 8.7624509307e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.3509848737e-02"/>
+      <inertia ixx="1.5149563429e-05" iyy="3.4882434195e-05" izz="3.3564913922e-05" ixy="-2.7915705560e-07" iyz="8.7562088752e-09" ixz="-1.2222775687e-08"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -212,9 +329,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 -0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BL_coxa_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0340 0.0440"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -229,27 +352,33 @@
 
   <link name="BL_femur_link">
     <inertial>
-      <origin xyz="4.0145528110e-02 4.9016410080e-04 8.8048240378e-06" rpy="0.0 0.0 0.0"/>
-      <mass value="7.3156083502e-02"/>
-      <inertia ixx="1.5468366589e-05" iyy="3.1544358830e-05" izz="3.7586097166e-05" ixy="-1.0858047859e-07" iyz="8.8078183621e-09" ixz="-1.2205264671e-08"/>
+      <origin xyz="4.0401550339e-02 4.1517337444e-04 8.8721308591e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.2601098063e-02"/>
+      <inertia ixx="1.4673146816e-05" iyy="3.0845009069e-05" izz="3.6113109040e-05" ixy="-2.7062059070e-07" iyz="8.7595148523e-09" ixz="-1.2040353984e-08"/>
     </inertial>
     <visual>
-      <origin xyz="3.5527136788e-17 4.4408920985e-18 -1.5777218104e-32" rpy="0.0 0.0 0.0"/>
+      <origin xyz="-3.5527136788e-17 -1.3322676296e-17 -3.1554436209e-32" rpy="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="file://$(find ${package_name})/src/meshes/BL_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="3.5527136788e-17 4.4408920985e-18 -1.5777218104e-32" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 -0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BL_femur_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0440 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 -0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="BL_femur_joint" type="revolute">
-    <origin xyz="5.8750000000e-02 -1.3322676296e-17 -4.4408920985e-18" rpy="-0.0 -0.0 -0.0"/>
+    <origin xyz="5.8750000000e-02 -8.8817841970e-18 -2.2204460493e-17" rpy="-0.0 -0.0 -0.0"/>
     <parent link="BL_coxa_link"/>
     <child link="BL_femur_link"/>
     <axis xyz="0 1 0"/>
@@ -258,27 +387,39 @@
 
   <link name="BL_tibia_link">
     <inertial>
-      <origin xyz="5.8833015368e-02 1.5998913851e-04 5.2436683685e-04" rpy="0.0 0.0 0.0"/>
-      <mass value="5.1241386356e-02"/>
-      <inertia ixx="1.1435385570e-05" iyy="5.8513174190e-05" izz="6.5283642642e-05" ixy="3.0122665044e-07" iyz="-5.3036574828e-09" ixz="4.4618689070e-07"/>
+      <origin xyz="5.9531028834e-02 -2.8828615748e-10 5.1365806300e-04" rpy="0.0 0.0 0.0"/>
+      <mass value="5.1474491899e-02"/>
+      <inertia ixx="1.0397341267e-05" iyy="5.7770805824e-05" izz="6.3449001562e-05" ixy="3.8530857300e-13" iyz="-2.7682536513e-13" ixz="4.5736826022e-07"/>
     </inertial>
     <visual>
-      <origin xyz="0.0000000000e+00 -3.1086244690e-17 -7.8886090522e-33" rpy="0.0 0.0 0.0"/>
+      <origin xyz="3.5527136788e-17 4.4408920985e-18 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="file://$(find ${package_name})/src/meshes/BL_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 -3.1086244690e-17 -7.8886090522e-33" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.015500 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BL_tibia_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0570 0.0520 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.064250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0405 0.0200 0.0160"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.100000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0135"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="BL_tibia_joint" type="revolute">
-    <origin xyz="5.8750000000e-02 7.9936057773e-17 2.6645352591e-17" rpy="0.0 0.0 0.0"/>
+    <origin xyz="5.8750000000e-02 2.6645352591e-17 6.2172489379e-17" rpy="-0.0 0.0 0.0"/>
     <parent link="BL_femur_link"/>
     <child link="BL_tibia_link"/>
     <axis xyz="0 1 0"/>
@@ -287,9 +428,9 @@
 
   <link name="BR_coxa_link">
     <inertial>
-      <origin xyz="3.9841159377e-02 4.0642389935e-04 9.1879486150e-05" rpy="0.0 0.0 0.0"/>
-      <mass value="7.4164051176e-02"/>
-      <inertia ixx="1.6043234687e-05" iyy="3.6459500729e-05" izz="3.4314315647e-05" ixy="-2.8751191911e-07" iyz="1.1261526114e-08" ixz="1.6563581299e-07"/>
+      <origin xyz="4.0118342431e-02 4.1004087736e-04 8.7624509307e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.3509848737e-02"/>
+      <inertia ixx="1.5149563429e-05" iyy="3.4882434195e-05" izz="3.3564913922e-05" ixy="-2.7915705560e-07" iyz="8.7562088752e-09" ixz="-1.2222775687e-08"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -299,9 +440,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BR_coxa_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0340 0.0440"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -316,9 +463,9 @@
 
   <link name="BR_femur_link">
     <inertial>
-      <origin xyz="4.0145528110e-02 4.9016410080e-04 8.8048240378e-06" rpy="0.0 0.0 0.0"/>
-      <mass value="7.3156083502e-02"/>
-      <inertia ixx="1.5468366589e-05" iyy="3.1544358830e-05" izz="3.7586097166e-05" ixy="-1.0858047859e-07" iyz="8.8078183621e-09" ixz="-1.2205264671e-08"/>
+      <origin xyz="4.0401550339e-02 4.1517337444e-04 8.8721308591e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.2601098063e-02"/>
+      <inertia ixx="1.4673146816e-05" iyy="3.0845009069e-05" izz="3.6113109040e-05" ixy="-2.7062059070e-07" iyz="8.7595148523e-09" ixz="-1.2040353984e-08"/>
     </inertial>
     <visual>
       <origin xyz="3.5527136788e-17 -4.4408920985e-18 -1.5777218104e-32" rpy="0.0 0.0 0.0"/>
@@ -328,9 +475,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="3.5527136788e-17 -4.4408920985e-18 -1.5777218104e-32" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 -0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BR_femur_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0440 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 -0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -345,9 +498,9 @@
 
   <link name="BR_tibia_link">
     <inertial>
-      <origin xyz="5.8833015368e-02 1.5998913851e-04 5.2436683685e-04" rpy="0.0 0.0 0.0"/>
-      <mass value="5.1241386356e-02"/>
-      <inertia ixx="1.1435385570e-05" iyy="5.8513174190e-05" izz="6.5283642642e-05" ixy="3.0122665044e-07" iyz="-5.3036574828e-09" ixz="4.4618689070e-07"/>
+      <origin xyz="5.9531028834e-02 -2.8828613083e-10 5.1365806300e-04" rpy="0.0 0.0 0.0"/>
+      <mass value="5.1474491899e-02"/>
+      <inertia ixx="1.0397341267e-05" iyy="5.7770805824e-05" izz="6.3449001562e-05" ixy="3.8530857300e-13" iyz="-2.7682536513e-13" ixz="4.5736826022e-07"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 3.1086244690e-17 -7.8886090522e-33" rpy="0.0 0.0 0.0"/>
@@ -357,9 +510,21 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 3.1086244690e-17 -7.8886090522e-33" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.015500 0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BR_tibia_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0570 0.0520 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.064250 0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0405 0.0200 0.0160"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.100000 0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0135"/>
       </geometry>
     </collision>
   </link>
@@ -374,9 +539,9 @@
 
   <link name="MR_coxa_link">
     <inertial>
-      <origin xyz="3.9841159377e-02 4.0642389935e-04 9.1879486150e-05" rpy="0.0 0.0 0.0"/>
-      <mass value="7.4164051176e-02"/>
-      <inertia ixx="1.6043234687e-05" iyy="3.6459500729e-05" izz="3.4314315647e-05" ixy="-2.8751191911e-07" iyz="1.1261526114e-08" ixz="1.6563581299e-07"/>
+      <origin xyz="4.0118342431e-02 4.1004087736e-04 8.7624509307e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.3509848737e-02"/>
+      <inertia ixx="1.5149563429e-05" iyy="3.4882434195e-05" izz="3.3564913922e-05" ixy="-2.7915705560e-07" iyz="8.7562088752e-09" ixz="-1.2222775687e-08"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -386,9 +551,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/MR_coxa_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0340 0.0440"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -403,9 +574,9 @@
 
   <link name="MR_femur_link">
     <inertial>
-      <origin xyz="4.0145528110e-02 4.9016410080e-04 8.8048240378e-06" rpy="0.0 0.0 0.0"/>
-      <mass value="7.3156083502e-02"/>
-      <inertia ixx="1.5468366589e-05" iyy="3.1544358830e-05" izz="3.7586097166e-05" ixy="-1.0858047859e-07" iyz="8.8078183621e-09" ixz="-1.2205264671e-08"/>
+      <origin xyz="4.0401550339e-02 4.1517337444e-04 8.8721308591e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.2601098063e-02"/>
+      <inertia ixx="1.4673146816e-05" iyy="3.0845009069e-05" izz="3.6113109040e-05" ixy="-2.7062059070e-07" iyz="8.7595148523e-09" ixz="-1.2040353984e-08"/>
     </inertial>
     <visual>
       <origin xyz="1.7763568394e-17 9.8607613153e-34 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -415,9 +586,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="1.7763568394e-17 9.8607613153e-34 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/MR_femur_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0440 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -432,9 +609,9 @@
 
   <link name="MR_tibia_link">
     <inertial>
-      <origin xyz="5.8833015368e-02 1.5998913851e-04 5.2436683685e-04" rpy="0.0 0.0 0.0"/>
-      <mass value="5.1241386356e-02"/>
-      <inertia ixx="1.1435385570e-05" iyy="5.8513174190e-05" izz="6.5283642642e-05" ixy="3.0122665044e-07" iyz="-5.3036574828e-09" ixz="4.4618689070e-07"/>
+      <origin xyz="5.9531028834e-02 -2.8828616192e-10 5.1365806300e-04" rpy="0.0 0.0 0.0"/>
+      <mass value="5.1474491899e-02"/>
+      <inertia ixx="1.0397341267e-05" iyy="5.7770805824e-05" izz="6.3449001562e-05" ixy="3.8530857300e-13" iyz="-2.7682536513e-13" ixz="4.5736826022e-07"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 1.9721522631e-33 -3.9443045261e-33" rpy="0.0 0.0 0.0"/>
@@ -444,9 +621,21 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 1.9721522631e-33 -3.9443045261e-33" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.015500 0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/MR_tibia_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0570 0.0520 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.064250 0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0405 0.0200 0.0160"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.100000 0.000000 -0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0135"/>
       </geometry>
     </collision>
   </link>
@@ -461,9 +650,9 @@
 
   <link name="FR_coxa_link">
     <inertial>
-      <origin xyz="3.9841159377e-02 4.0642389935e-04 9.1879486150e-05" rpy="0.0 0.0 0.0"/>
-      <mass value="7.4164051176e-02"/>
-      <inertia ixx="1.6043234687e-05" iyy="3.6459500729e-05" izz="3.4314315647e-05" ixy="-2.8751191911e-07" iyz="1.1261526114e-08" ixz="1.6563581299e-07"/>
+      <origin xyz="4.0118342431e-02 4.1004087736e-04 8.7624509307e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.3509848737e-02"/>
+      <inertia ixx="1.5149563429e-05" iyy="3.4882434195e-05" izz="3.3564913922e-05" ixy="-2.7915705560e-07" iyz="8.7562088752e-09" ixz="-1.2222775687e-08"/>
     </inertial>
     <visual>
       <origin xyz="-3.5527136788e-17 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -473,9 +662,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="-3.5527136788e-17 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 -0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FR_coxa_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0340 0.0440"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -490,9 +685,9 @@
 
   <link name="FR_femur_link">
     <inertial>
-      <origin xyz="4.0145528110e-02 4.9016410080e-04 8.8048240378e-06" rpy="0.0 0.0 0.0"/>
-      <mass value="7.3156083502e-02"/>
-      <inertia ixx="1.5468366589e-05" iyy="3.1544358830e-05" izz="3.7586097166e-05" ixy="-1.0858047859e-07" iyz="8.8078183621e-09" ixz="-1.2205264671e-08"/>
+      <origin xyz="4.0401550339e-02 4.1517337444e-04 8.8721308591e-06" rpy="0.0 0.0 0.0"/>
+      <mass value="7.2601098063e-02"/>
+      <inertia ixx="1.4673146816e-05" iyy="3.0845009069e-05" izz="3.6113109040e-05" ixy="-2.7062059070e-07" iyz="8.7595148523e-09" ixz="-1.2040353984e-08"/>
     </inertial>
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -502,9 +697,15 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.005250 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FR_femur_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0365 0.0440 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.046750 0.000450 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+      <geometry>
+        <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
   </link>
@@ -519,9 +720,9 @@
 
   <link name="FR_tibia_link">
     <inertial>
-      <origin xyz="5.8833015368e-02 1.5998913851e-04 5.2436683685e-04" rpy="0.0 0.0 0.0"/>
-      <mass value="5.1241386356e-02"/>
-      <inertia ixx="1.1435385570e-05" iyy="5.8513174190e-05" izz="6.5283642642e-05" ixy="3.0122665044e-07" iyz="-5.3036574828e-09" ixz="4.4618689070e-07"/>
+      <origin xyz="5.9531028834e-02 -2.8828617524e-10 5.1365806300e-04" rpy="0.0 0.0 0.0"/>
+      <mass value="5.1474491899e-02"/>
+      <inertia ixx="1.0397341267e-05" iyy="5.7770805824e-05" izz="6.3449001562e-05" ixy="3.8530857300e-13" iyz="-2.7682536513e-13" ixz="4.5736826022e-07"/>
     </inertial>
     <visual>
       <origin xyz="-7.1054273576e-17 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
@@ -531,9 +732,21 @@
       <material name="SpiderBob_printed"/>
     </visual>
     <collision>
-      <origin xyz="-7.1054273576e-17 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.015500 -0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FR_tibia_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0570 0.0520 0.0300"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.064250 -0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0405 0.0200 0.0160"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.100000 -0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <sphere radius="0.0135"/>
       </geometry>
     </collision>
   </link>
@@ -548,9 +761,9 @@
 
   <link name="camera_link">
     <inertial>
-      <origin xyz="1.8490407244e-02 -3.3562731210e-05 8.9491128705e-03" rpy="0.0 0.0 0.0"/>
-      <mass value="8.9828199215e-02"/>
-      <inertia ixx="5.8466470528e-05" iyy="1.5279867414e-05" izz="6.3990204935e-05" ixy="-6.1735089897e-08" iyz="-6.7012900575e-08" ixz="-1.9779192562e-06"/>
+      <origin xyz="1.8451035948e-02 -3.1424462109e-05 8.9421736217e-03" rpy="0.0 0.0 0.0"/>
+      <mass value="9.0050611110e-02"/>
+      <inertia ixx="5.8592026119e-05" iyy="1.5366399126e-05" izz="6.4167638341e-05" ixy="-5.8499992556e-08" iyz="-6.6214101927e-08" ixz="-1.9948514855e-06"/>
     </inertial>
     <visual>
       <origin xyz="2.2500000000e-02 0.0000000000e+00 1.0000000000e-02" rpy="0.0 0.0 0.0"/>
@@ -560,19 +773,23 @@
       <material name="SpiderBob_D435i"/>
     </visual>
     <collision>
-      <origin xyz="2.2500000000e-02 0.0000000000e+00 1.0000000000e-02" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.022500 0.000000 0.010000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/camera_collision.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.0250 0.0900 0.0250"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.003499 0.001050 0.003815" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <box size="0.0270 0.0603 0.0374"/>
       </geometry>
     </collision>
   </link>
 
-  <joint name="Camera_tilt_joint" type="revolute">
-    <origin xyz="1.1300000000e-01 0.0000000000e+00 3.8500000000e-02" rpy="0.0 0.0 0.0"/>
+  <joint name="Camera_tilt_joint" type="fixed">
+    <origin xyz="1.1300000000e-01 0.0000000000e+00 3.8500000000e-02" rpy="0 ${camera_tilt} 0"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
-    <axis xyz="0 1 0"/>
-    <limit lower="0.000000" upper="0.523599" effort="1.27" velocity="5.97"/>
   </joint>
 
 </robot>
