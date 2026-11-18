@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="spiderbob">
+  <!-- 256 mm bed variant: corner coxa axes at x = +-109.5 mm (was +-115), plates 250 x 195 mm.
+       Joint limits unchanged. base_link inertia not recomputed. -->
   <xacro:property name="package_name" value="spiderbob_description"/>
   <xacro:arg name="camera_tilt_deg" default="10"/>
   <xacro:property name="camera_tilt_deg" value="$(arg camera_tilt_deg)"/>
@@ -22,7 +24,7 @@
     <collision>
       <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <box size="0.2610 0.1580 0.0390"/>
+        <box size="0.2500 0.1580 0.0390"/>
       </geometry>
     </collision>
     <collision>
@@ -50,7 +52,7 @@
       </geometry>
     </collision>
     <collision>
-      <origin xyz="0.106515 0.053515 0.000450" rpy="0.000000 0.000000 -0.785398"/>
+      <origin xyz="0.101015 0.053515 0.000450" rpy="0.000000 0.000000 -0.785398"/>
       <geometry>
         <box size="0.0285 0.0465 0.0409"/>
       </geometry>
@@ -62,13 +64,13 @@
       </geometry>
     </collision>
     <collision>
-      <origin xyz="-0.106515 0.053515 0.000450" rpy="0.000000 0.000000 0.785398"/>
+      <origin xyz="-0.101015 0.053515 0.000450" rpy="0.000000 0.000000 0.785398"/>
       <geometry>
         <box size="0.0285 0.0465 0.0409"/>
       </geometry>
     </collision>
     <collision>
-      <origin xyz="-0.106515 -0.053515 0.000450" rpy="0.000000 0.000000 2.356194"/>
+      <origin xyz="-0.101015 -0.053515 0.000450" rpy="0.000000 0.000000 2.356194"/>
       <geometry>
         <box size="0.0285 0.0465 0.0409"/>
       </geometry>
@@ -80,7 +82,7 @@
       </geometry>
     </collision>
     <collision>
-      <origin xyz="0.106515 -0.053515 0.000450" rpy="0.000000 0.000000 -2.356194"/>
+      <origin xyz="0.101015 -0.053515 0.000450" rpy="0.000000 0.000000 -2.356194"/>
       <geometry>
         <box size="0.0285 0.0465 0.0409"/>
       </geometry>
@@ -121,7 +123,7 @@
   </link>
 
   <joint name="FL_coxa_joint" type="revolute">
-    <origin xyz="1.1500000000e-01 6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 0.785398"/>
+    <origin xyz="1.0950000000e-01 6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 0.785398"/>
     <parent link="base_link"/>
     <child link="FL_coxa_link"/>
     <axis xyz="0 0 1"/>
@@ -343,7 +345,7 @@
   </link>
 
   <joint name="BL_coxa_joint" type="revolute">
-    <origin xyz="-1.1500000000e-01 6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 2.356194"/>
+    <origin xyz="-1.0950000000e-01 6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 2.356194"/>
     <parent link="base_link"/>
     <child link="BL_coxa_link"/>
     <axis xyz="0 0 1"/>
@@ -454,7 +456,7 @@
   </link>
 
   <joint name="BR_coxa_joint" type="revolute">
-    <origin xyz="-1.1500000000e-01 -6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 -2.356194"/>
+    <origin xyz="-1.0950000000e-01 -6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 -2.356194"/>
     <parent link="base_link"/>
     <child link="BR_coxa_link"/>
     <axis xyz="0 0 1"/>
@@ -676,7 +678,7 @@
   </link>
 
   <joint name="FR_coxa_joint" type="revolute">
-    <origin xyz="1.1500000000e-01 -6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 -0.785398"/>
+    <origin xyz="1.0950000000e-01 -6.2000000000e-02 0.0000000000e+00" rpy="0.0 0.0 -0.785398"/>
     <parent link="base_link"/>
     <child link="FR_coxa_link"/>
     <axis xyz="0 0 1"/>

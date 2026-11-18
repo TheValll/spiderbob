@@ -92,7 +92,8 @@ I can now make a list of the hardware I'll need for the next steps:
 | 1× AC/DC power supply                       | [Weishuo — 12 V / 20 A / 240 W](https://www.amazon.fr/gp/product/B0GR7XFHKT/)                                      |                   €33 | Yes        |
 | 1× RGB-D camera                             | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
 | 1× LiDAR, USB adapter                       | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
-| **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€899.34 estimated** |            |
+| 18× Idler sets                              | [ROBOTIS HN11-I101 — MyBotShop](https://www.mybotshop.de/DYNAMIXEL-XL430-HN11-I101-Set_1)                          |               €125.10 | Yes        |
+| **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€1,024.44 estimated** |            |
 | ----                                        | ----                                                                                                               |                  ---- | ----       |
 | **ONBOARD HARDWARE**                        |                                                                                                                    |                       |            |
 | Onboard computer                            | TBD                                                                                                                |                   TBD | No         |
@@ -103,7 +104,7 @@ I can now make a list of the hardware I'll need for the next steps:
 | Main DC power switch                        | XT60 inline switch, ≥ 30 A, between the fuse and the PCB (plug-in, no soldering)                                   |                   TBD | No         |
 | Fuse and holder                             | XT60 inline blade-fuse holder right after the battery, 15–20 A blade fuse                                          |                   TBD | No         |
 | LiPo low-voltage alarm                      | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   TBD | No         |
-| **PROVISIONAL TOTAL**                       | **Excluding TBD items and shipping**                                                                               | **€899.34 estimated** |            |
+| **PROVISIONAL TOTAL**                       | **Excluding TBD items and shipping**                                                                               | **€1,024.44 estimated** |            |
 
 #### Dimensions and 3D Models
 
@@ -170,12 +171,10 @@ Test samples for the first print order, with one complete leg (STL in `modelisat
 
 #### Provisional screws and nuts
 
-Counted on the 3D model. The PCB and the U2D2 are held with double-sided tape, without screws. Used servos come without their screws.
-
 | Type                                                                 | Quantity | Reference | Price |
 | -------------------------------------------------------------------- | -------: | --------- | ----: |
-| M2 × 6 (horns and idlers)                                            |      144 |           |       |
-| M2.6 × 6 self-tapping, low head (servo cases, test on a servo first) |       72 |           |       |
+| M2 × 6 socket head, ISO 4762 (horns and idlers)                      |      144 |           |       |
+| M2.6 × 6 self-tapping for plastic, pan head Ø ≤ 5 mm (servo cases)   |       72 |           |       |
 | M2.5 × 6 socket head (LiDAR)                                         |        4 |           |       |
 | M3 × 6                                                               |        2 |           |       |
 | M3 × 10                                                              |        2 |           |       |
