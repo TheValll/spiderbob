@@ -52,3 +52,10 @@ CATKIN_IGNORE
 
 # Fusion 360 build/animation scripts
 modelisations/fusion/
+
+# macOS
+.DS_Store
+
+# colcon outputs
+install/
+log/

@@ -15,7 +15,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/base.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -102,7 +102,7 @@
     <visual>
       <origin xyz="-3.5527136788e-17 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FL_coxa.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/FL_coxa.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -137,7 +137,7 @@
     <visual>
       <origin xyz="-3.5527136788e-17 4.4408920985e-18 7.8886090522e-33" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FL_femur.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/FL_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -172,7 +172,7 @@
     <visual>
       <origin xyz="7.1054273576e-17 -1.7763568394e-17 -3.9443045261e-32" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FL_tibia.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/FL_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -213,7 +213,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/ML_coxa.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/ML_coxa.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -248,7 +248,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 3.9443045261e-33 7.8886090522e-33" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/ML_femur.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/ML_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -283,7 +283,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/ML_tibia.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/ML_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -324,7 +324,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BL_coxa.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/BL_coxa.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -359,7 +359,7 @@
     <visual>
       <origin xyz="-3.5527136788e-17 -1.3322676296e-17 -3.1554436209e-32" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BL_femur.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/BL_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -394,7 +394,7 @@
     <visual>
       <origin xyz="3.5527136788e-17 4.4408920985e-18 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BL_tibia.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/BL_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -435,7 +435,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BR_coxa.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/BR_coxa.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -470,7 +470,7 @@
     <visual>
       <origin xyz="3.5527136788e-17 -4.4408920985e-18 -1.5777218104e-32" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BR_femur.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/BR_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -505,7 +505,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 3.1086244690e-17 -7.8886090522e-33" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/BR_tibia.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/BR_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -546,7 +546,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/MR_coxa.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/MR_coxa.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -581,7 +581,7 @@
     <visual>
       <origin xyz="1.7763568394e-17 9.8607613153e-34 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/MR_femur.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/MR_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -616,7 +616,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 1.9721522631e-33 -3.9443045261e-33" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/MR_tibia.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/MR_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -657,7 +657,7 @@
     <visual>
       <origin xyz="-3.5527136788e-17 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FR_coxa.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/FR_coxa.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -692,7 +692,7 @@
     <visual>
       <origin xyz="0.0000000000e+00 0.0000000000e+00 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FR_femur.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/FR_femur.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -727,7 +727,7 @@
     <visual>
       <origin xyz="-7.1054273576e-17 -1.3322676296e-17 0.0000000000e+00" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/FR_tibia.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/FR_tibia.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_printed"/>
     </visual>
@@ -768,7 +768,7 @@
     <visual>
       <origin xyz="2.2500000000e-02 0.0000000000e+00 1.0000000000e-02" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="file://$(find ${package_name})/src/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://${package_name}/src/meshes/camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="SpiderBob_D435i"/>
     </visual>
