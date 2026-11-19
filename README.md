@@ -171,19 +171,19 @@ Test samples for the first print order, with one complete leg (STL in `modelisat
 
 #### Provisional screws and nuts
 
-| Type                                                                 | Quantity | Reference | Price |
-| -------------------------------------------------------------------- | -------: | --------- | ----: |
-| M2 × 6 socket head, ISO 4762 (horns and idlers)                      |      144 |           |       |
-| M2.6 × 6 self-tapping for plastic, pan head Ø ≤ 5 mm (servo cases)   |       72 |           |       |
-| M2.5 × 6 socket head (LiDAR)                                         |        4 |           |       |
-| M3 × 6                                                               |        2 |           |       |
-| M3 × 10                                                              |        2 |           |       |
-| M3 × 12                                                              |        4 |           |       |
-| M3 × 16                                                              |        2 |           |       |
-| M3 × 45                                                              |        8 |           |       |
-| M3 hex nut                                                           |       14 |           |       |
-| M3 nylon-insert nut                                                  |        2 |           |       |
-| M3 spacer Ø5 × 6                                                     |        1 |           |       |
+| Type | Quantity | Reference | Price |
+| --- | ---: | --- | ---: |
+| M2 × 6 socket head, ISO 4762 (horns and idlers) | 144 | [vis-express, A2, ×200](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36711-2598830-vis-metaux-inox-a2-chc-btr-cle-de-15-hc15-filetage-total-m2x6.html) | €5.76 |
+| M2.6 × 6 self-tapping for plastic, pan head Ø ≤ 5 mm (servo cases) | 72 | [Amazon, Yosoo M2/M2.6 kit, 2 kits](https://www.amazon.fr/Yosoo-Health-Gear-Autotaraudeuses-M2-M2-6/dp/B08PKQ96NS) | €19.96 |
+| M2.5 × 6 socket head (LiDAR) | 4 | [vis-express, A2, ×10](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36720-2599636-vis-metaux-inox-a2-chc-btr-cle-de-2-hc2-m25x6-filetage-total.html) | €4.44 |
+| M3 × 6 | 2 | [vis-express, A2, ×10](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36726-2595617-vis-metaux-inox-a2-chc-btr-cle-de-25-hc25-m3x6-filetage-total.html) | €4.44 |
+| M3 × 10 | 2 | [vis-express, A2, ×10](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36730-2597692-vis-metaux-inox-a2-chc-btr-cle-de-25-hc25-m3x10-filetage-total.html) | €4.44 |
+| M3 × 12 | 4 | [vis-express, A2, ×10](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/36731-2616466-vis-metaux-inox-a2-chc-btr-cle-de-25-hc25-m3x12-filetage-total.html) | €4.44 |
+| M3 × 16 | 2 | [vis-express, A2, ×10](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a2-din-912-iso-4762/19604-2603864-vis-metaux-inox-a2-chc-btr-cle-de-25-hc25-m3x16-filetage-total.html) | €4.44 |
+| M3 × 45 | 8 | [vis-express, A4, ×10](https://www.vis-express.fr/vis-metaux-chc-btr-filetage-total-inox-a4-din-912-iso-4762/56531-2541662-vis-metaux-chc-btr-m3x45-filetee-sur-17-cle-de-25-hc25-inox-a4.html) | €10.14 |
+| M3 hex nut | 14 | [vis-express, A2, ×30](https://www.vis-express.fr/ecrou-hexagonal-hu-din-934-iso-4032-inox-a2/36813-2517464-ecrou-hexagonal-hu-m3-inox-a2-wax-lubrifie.html) | €1.44 |
+| M3 nylon-insert nut | 2 | [vis-express, zinc-plated, ×10](https://www.vis-express.fr/ecrou-frein-din-985-din-985vs4325/31289-2446328-ecrou-frein-m3-acier-zingue.html) | €1.20 |
+| **Total, excluding shipping** |  |  | **€60.70** |
 
 #### Adjustable camera mount
 
