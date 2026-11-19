@@ -93,7 +93,10 @@ I can now make a list of the hardware I'll need for the next steps:
 | 1× RGB-D camera                             | [Intel RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)                                  |               €214.19 | Yes        |
 | 1× LiDAR, USB adapter                       | [SLAMTEC RPLIDAR C1 — GoTronic 38763](https://www.gotronic.fr/art-capteur-de-distance-rplidar-c1-38898.htm)        |                €83.90 | No         |
 | 18× Idler sets                              | [ROBOTIS HN11-I101 — MyBotShop](https://www.mybotshop.de/DYNAMIXEL-XL430-HN11-I101-Set_1)                          |               €125.10 | Yes        |
-| **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€1,024.44 estimated** |            |
+| Screws and nuts (see the table below)       | vis-express.fr and Amazon — [Provisional screws and nuts](#provisional-screws-and-nuts)                           |                €60.70 | No         |
+| 1× 3D printer                               | Bambu Lab P2S Combo (with AMS 2 Pro)                                                                               |               €599.00 | Yes        |
+| Filament                                    | Bambu Lab: 2 kg PETG-CF, 2 kg PETG Matte, 1 kg TPU 95A HF, 1 kg PLA Basic                                          |               €114.06 | Yes        |
+| **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€1,798.20 estimated** |            |
 | ----                                        | ----                                                                                                               |                  ---- | ----       |
 | **ONBOARD HARDWARE**                        |                                                                                                                    |                       |            |
 | Onboard computer                            | TBD                                                                                                                |                   TBD | No         |
@@ -104,7 +107,7 @@ I can now make a list of the hardware I'll need for the next steps:
 | Main DC power switch                        | XT60 inline switch, ≥ 30 A, between the fuse and the PCB (plug-in, no soldering)                                   |                   TBD | No         |
 | Fuse and holder                             | XT60 inline blade-fuse holder right after the battery, 15–20 A blade fuse                                          |                   TBD | No         |
 | LiPo low-voltage alarm                      | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   TBD | No         |
-| **PROVISIONAL TOTAL**                       | **Excluding TBD items and shipping**                                                                               | **€1,024.44 estimated** |            |
+| **PROVISIONAL TOTAL**                       | **Excluding TBD items and shipping**                                                                               | **€1,798.20 estimated** |            |
 
 #### Dimensions and 3D Models
 
