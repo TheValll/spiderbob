@@ -139,6 +139,8 @@ Port 1 of the custom PCB has no 12 V on its power pin: it is the U2D2 input (PC 
 
 Today, I took some time to draw the electrical schematic and an overview of the whole project.
 
+![System overview: servo IDs, power distribution board and wiring](schemas/schema4.png)
+
 #### 3D hexapod prototype
 
 After a few Google searches, I found 3D models of all the components I need for development. Having those models helped me a lot when I started building the hexapod in 3D.
