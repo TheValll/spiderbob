@@ -96,18 +96,27 @@ I can now make a list of the hardware I'll need for the next steps:
 | Screws and nuts (see the table below)       | vis-express.fr and Amazon — [Provisional screws and nuts](#provisional-screws-and-nuts)                           |                €57.72 | Yes        |
 | 1× 3D printer                               | Bambu Lab P2S Combo (with AMS 2 Pro)                                                                               |               €599.00 | Yes        |
 | Filament                                    | Bambu Lab: 2 kg PETG-CF, 2 kg PETG Matte, 1 kg TPU 95A HF, 1 kg PLA Basic                                          |               €114.06 | Yes        |
-| **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€1,795.22 estimated** |            |
+| 3× USB-C data cables, 10 Gbps                | [UGREEN USB-C to USB-C, 240 W](https://www.amazon.fr/dp/B0GZMCN439) — 1 m (camera), 2 × 2 m (U2D2, LiDAR)          |                €33.47 | Yes        |
+| **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€1,828.69 estimated** |            |
 | ----                                        | ----                                                                                                               |                  ---- | ----       |
-| **ONBOARD HARDWARE**                        |                                                                                                                    |                       |            |
-| Onboard computer                            | TBD                                                                                                                |                   TBD | No         |
-| Battery                                     | TBD                                                                                                                |                   TBD | No         |
-| Compatible battery charger                  | TBD                                                                                                                |                   TBD | No         |
-| Battery-to-PCB power cable                  | XT60 or terminal connection — TBD                                                                                  |                   TBD | No         |
-| Voltage regulators for computer and sensors | TBD                                                                                                                |                   TBD | No         |
-| Main DC power switch                        | XT60 inline switch, ≥ 30 A, between the fuse and the PCB (plug-in, no soldering)                                   |                   TBD | No         |
-| Fuse and holder                             | XT60 inline blade-fuse holder right after the battery, 15–20 A blade fuse                                          |                   TBD | No         |
-| LiPo low-voltage alarm                      | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   TBD | No         |
-| **PROVISIONAL TOTAL**                       | **Excluding TBD items and shipping**                                                                               | **€1,795.22 estimated** |            |
+| **ONBOARD HARDWARE (assumptions)**          | **Not chosen yet — estimated prices**                                                                              |                       |            |
+| 1× Onboard computer                         | [NVIDIA Jetson Orin Nano Super Developer Kit, 8 GB](https://fr.rs-online.com/web/p/modules-de-developpement-pour-processeurs/2647384) — 8 GB, not 4 GB; NVIDIA raised prices in Aug. 2026 ($249 → $399) |            ~€450–500 | No         |
+| 1× NVMe SSD                                 | M.2 2280, 256–512 GB, for Ubuntu and ROS 2 instead of a microSD card                                               |              ~€30–40 | No         |
+| 1× Battery                                  | [Gens Ace 3S 5000 mAh 50C, soft case, XT60](https://www.gensace.de/gens-ace-5000mah-11-1v-50c-3s1p-short-size-lipo-with-xt60-plug-p.html) — 139 × 43.5 × 30.5 mm, 381 g; no LiHV |              ~€60–69 | No         |
+| 1× Battery charger                          | [ToolkitRC M7AC](https://www.studiosport.fr/chargeur-m7ac-toolkitrc-a26809.html) or M6AC — mains powered, adjustable end-of-charge voltage |              ~€70–75 | No         |
+| 1× LiPo safety bag                          | Fireproof bag for charging and storage                                                                             |                  ~€10 | No         |
+| 1× LiPo low-voltage alarm                   | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   ~€5 | No         |
+| 1× Main fuse and holder                     | XT60 inline blade-fuse holder right after the battery, 15–20 A blade fuse                                          |                   ~€8 | No         |
+| 1× XT60 Y splitter                          | 1 input, 2 outputs: servo branch and computer branch, after the main fuse                                          |                   ~€5 | No         |
+| 1× Servo power switch                       | XT60 inline switch, ≥ 30 A, between the splitter and the PCB — cuts the servos only (emergency stop)               |                  ~€10 | No         |
+| 1× Computer fuse and holder                 | Small inline fuse holder, 5 A fuse, on the computer branch                                                         |                   ~€5 | No         |
+| 1× Computer power switch                    | Small inline switch, ≥ 5 A, on the computer branch                                                                 |                   ~€5 | No         |
+| 1× Buck-boost converter                     | DC-DC, 8–14 V in, 19 V / ≥ 5 A out (~45 × 52 × 32 mm) — stable supply for the Jetson when the battery sags          |              ~€15–25 | No         |
+| 1× Jetson power cable                       | Barrel plug (5.5 × 2.5 mm, to be checked) from the buck-boost to the Jetson                                        |                   ~€5 | No         |
+| 1× Camera cable                             | USB-A to USB-C, USB 3, 20–30 cm (D435i → Jetson)                                                                   |                  ~€10 | No         |
+| 1× U2D2 cable                               | USB-A to USB-C, 20–30 cm (U2D2 → Jetson); the LiDAR uses its bundled cable                                         |                   ~€8 | No         |
+| **ONBOARD SUBTOTAL**                        |                                                                                                                    | **~€700–780 estimated** |            |
+| **PROVISIONAL TOTAL**                       | **Excluding shipping**                                                                                             | **~€2,525–2,610 estimated** |            |
 
 #### Dimensions and 3D Models
 
