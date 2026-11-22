@@ -102,7 +102,7 @@ I can now make a list of the hardware I'll need for the next steps:
 | **ONBOARD HARDWARE (assumptions)**          | **Not chosen yet — estimated prices**                                                                              |                       |            |
 | 1× Onboard computer                         | [NVIDIA Jetson Orin Nano Super Developer Kit, 8 GB](https://fr.rs-online.com/web/p/modules-de-developpement-pour-processeurs/2647384) — 8 GB, not 4 GB; NVIDIA raised prices in Aug. 2026 ($249 → $399) |            ~€450–500 | No         |
 | 1× NVMe SSD                                 | M.2 2280, 256–512 GB, for Ubuntu and ROS 2 instead of a microSD card                                               |              ~€30–40 | No         |
-| 1× Battery                                  | [Gens Ace 3S 5000 mAh 50C, soft case, XT60](https://www.gensace.de/gens-ace-5000mah-11-1v-50c-3s1p-short-size-lipo-with-xt60-plug-p.html) — 139 × 43.5 × 30.5 mm, 381 g; no LiHV |              ~€60–69 | No         |
+| 1× Battery                                  | [Gens Ace G-Tech 3S 5000 mAh 60C Shorty, soft case, XT60](https://gensace.de/products/gens-ace-g-tech-5000mah-11-1v-60c-3s1p-short-size-lipo-with-xt60-plug) — 130 × 45 × 28 mm, 346 g; no LiHV |                 ~€61 | No         |
 | 1× Battery charger                          | [ToolkitRC M7AC](https://www.studiosport.fr/chargeur-m7ac-toolkitrc-a26809.html) or M6AC — mains powered, adjustable end-of-charge voltage |              ~€70–75 | No         |
 | 1× LiPo safety bag                          | Fireproof bag for charging and storage                                                                             |                  ~€10 | No         |
 | 1× LiPo low-voltage alarm                   | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   ~€5 | No         |
@@ -111,8 +111,8 @@ I can now make a list of the hardware I'll need for the next steps:
 | 1× Servo power switch                       | XT60 inline switch, ≥ 30 A, between the splitter and the PCB — cuts the servos only (emergency stop)               |                  ~€10 | No         |
 | 1× Computer fuse and holder                 | Small inline fuse holder, 5 A fuse, on the computer branch                                                         |                   ~€5 | No         |
 | 1× Computer power switch                    | Small inline switch, ≥ 5 A, on the computer branch                                                                 |                   ~€5 | No         |
-| 1× Buck-boost converter                     | DC-DC, 8–14 V in, 19 V / ≥ 5 A out (~45 × 52 × 32 mm) — stable supply for the Jetson when the battery sags          |              ~€15–25 | No         |
-| 1× Jetson power cable                       | Barrel plug (5.5 × 2.5 mm, to be checked) from the buck-boost to the Jetson                                        |                   ~€5 | No         |
+| 1× Step-up converter                        | [Pololu U3V70A, 4.5–20 V adjustable boost — EXP-Tech](https://exp-tech.de/en/products/45-20v-fine-adjust-step-up-voltage-regulator-u3v70a), set to 19 V; 40.6 × 15.2 mm, 3.9 g, 2 × M2 holes; XT60 male pigtail (AMASS) soldered on VIN/GND |                 ~€22 | No         |
+| 1× Jetson power cable                       | 5.5 × 2.5 mm barrel plug pigtail, centre positive, soldered on the step-up VOUT/GND                                |                   ~€5 | No         |
 | 1× Camera cable                             | USB-A to USB-C, USB 3, 20–30 cm (D435i → Jetson)                                                                   |                  ~€10 | No         |
 | 1× U2D2 cable                               | USB-A to USB-C, 20–30 cm (U2D2 → Jetson); the LiDAR uses its bundled cable                                         |                   ~€8 | No         |
 | **ONBOARD SUBTOTAL**                        |                                                                                                                    | **~€700–780 estimated** |            |
@@ -175,7 +175,7 @@ With this 3D prototype, I have 10 unique parts to print. The goal of this step i
 | Tibia         |        6 | PETG-CF  |
 | Foot          |        6 | TPU 95A  |
 
-Test samples for the first print order, with one complete leg (STL in `modelisations/hexapode/stl/samples`):
+Test samples for the first print order, with one complete leg (STL in `modelisations/hexapode/samples`):
 
 | Sample         | Material | Checks                                                                       |
 | -------------- | -------- | ---------------------------------------------------------------------------- |
