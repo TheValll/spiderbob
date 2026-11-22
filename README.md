@@ -286,3 +286,12 @@ I also started to lay some foundations for the onboard system. I think I'll go w
 The project diagram should look like this:
 
 ![Planned onboard setup: Jetson Orin Nano, battery split into a servo branch and a computer branch](schemas/schema6.png)
+
+At the end of the day, I reshaped the robot prototype in Fusion with Claude Opus 5.5 to improve its weight and space, with the assumed onboard components:
+- Jetson Orin Nano 8 GB
+- Battery
+- Pololu step-up converter
+
+I removed the top cover to save weight and improve accessibility:
+
+![Prototype v2: open frame without the cover, LiDAR table, Jetson, battery and step-up converter](schemas/schema7.gif)
