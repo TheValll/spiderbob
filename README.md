@@ -275,3 +275,14 @@ Quasi-static estimate for a 3 kg robot, worst leg at each moment. XL430 at 12 V:
 | Femur  |     −23 deg |  −0.401 |
 | Tibia  |    +110 deg |  +1.920 |
 | Camera | 10 deg down |   0.175 |
+
+
+### 11/22/2026
+
+After a few days, I've done a lot of things. I tried to find a way to get my 3D parts printed, but I didn't have any contacts for that and some places never answered, so I decided to buy my own printer and print my parts myself. That decision makes the project budget a lot higher, but most of the manufacturers quoted me around €1,300 for production. So I'm going to gain more experience in 3D printing by myself, and that will be very useful for other personal projects in the future. And I've wanted one for a long time.
+
+I also started to lay some foundations for the onboard system. I think I'll go with the best value option, the Jetson Orin Nano 8 GB, with a single battery split into two branches: one for the 18 servos and one, through a 19 V regulator, for the onboard computer.
+
+The project diagram should look like this:
+
+![Planned onboard setup: Jetson Orin Nano, battery split into a servo branch and a computer branch](schemas/schema6.png)
