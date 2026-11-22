@@ -256,8 +256,6 @@ Side view of one leg, femur and tibia limits (same for all six legs):
 
 #### Estimated servo torque
 
-Quasi-static estimate for a 3 kg robot, worst leg at each moment. XL430 at 12 V: 1.5 N·m stall, about 1.27 N·m with the PWM limited to 85 %.
-
 | Movement              | Max femur torque | % of the 85 % limit | Max current per leg |
 | --------------------- | ---------------: | ------------------: | ------------------: |
 | Standing              |         0.29 N·m |                23 % |              0.48 A |
@@ -295,3 +293,27 @@ At the end of the day, I reshaped the robot prototype in Fusion with Claude Opus
 I removed the top cover to save weight and improve accessibility:
 
 ![Prototype v2: open frame without the cover, LiDAR table, Jetson, battery and step-up converter](schemas/schema7.gif)
+
+#### New mass and torque estimation
+
+| Item | Mass |
+| --- | ---: |
+| Body: printed frame (plates, standoffs, LiDAR table, camera base), 6 coxa servos, PCB, U2D2, LiDAR, screws | 0.89 kg |
+| Jetson Orin Nano 8 GB developer kit (bare) | 0.17 kg |
+| Battery: Gens Ace G-Tech 3S 5000 mAh Shorty | 0.35 kg |
+| Step-up converter: Pololu U3V70A | 0.004 kg |
+| 6 legs: 12 servos, brackets, tibias, TPU feet | 1.19 kg |
+| Camera and cradle | 0.09 kg |
+| **Model total** | **2.70 kg** |
+| Servo cables, XT60 power wiring, fuses and switches (estimate) | ~0.1 kg |
+| **Estimated total** | **~2.8 kg** |
+
+| Movement              | Max femur torque | % of the 85 % limit | Max current per leg |
+| --------------------- | ---------------: | ------------------: | ------------------: |
+| Standing              |         0.27 N·m |                21 % |              0.45 A |
+| Tripod walk           |         0.70 N·m |                55 % |              0.89 A |
+| Ripple walk           |         0.49 N·m |                38 % |              0.67 A |
+| Turn in place         |         0.69 N·m |                54 % |              0.88 A |
+| Climbing a 50 mm step |         0.52 N·m |                41 % |              0.96 A |
+| Getting up from lying |         0.47 N·m |                37 % |              0.94 A |
+

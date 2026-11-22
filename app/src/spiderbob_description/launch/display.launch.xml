@@ -1,5 +1,6 @@
 <launch>
-  <!-- RViz with sliders for the 18 leg joints. Zero = straight legs; standing pose: femur -0.401, tibia +1.920 -->
+  <!-- RViz with sliders for the 18 leg joints. URDF zero = straight legs; the sliders start at the standing pose
+       (femur -0.401, tibia +1.920). Fixed frame base_footprint: the grid is the ground under the feet. -->
   <!-- camera mount notch, degrees down: 0, 10, 20 or 30 (fixed joint in the URDF) -->
   <arg name="camera_tilt_deg" default="10" />
   <let name="urdf_path" value="$(find-pkg-share spiderbob_description)/src/urdf/spiderbob.xacro" />
@@ -9,7 +10,21 @@
     <param name="robot_description" value="$(command 'xacro $(var urdf_path) camera_tilt_deg:=$(var camera_tilt_deg)')" />
   </node>
 
-  <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" />
+  <!-- sliders start (and "Center") at the Fusion standing pose -->
+  <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui">
+    <param name="zeros.FL_femur_joint" value="-0.401426" />
+    <param name="zeros.FL_tibia_joint" value="1.91986" />
+    <param name="zeros.ML_femur_joint" value="-0.401426" />
+    <param name="zeros.ML_tibia_joint" value="1.91986" />
+    <param name="zeros.BL_femur_joint" value="-0.401426" />
+    <param name="zeros.BL_tibia_joint" value="1.91986" />
+    <param name="zeros.BR_femur_joint" value="-0.401426" />
+    <param name="zeros.BR_tibia_joint" value="1.91986" />
+    <param name="zeros.MR_femur_joint" value="-0.401426" />
+    <param name="zeros.MR_tibia_joint" value="1.91986" />
+    <param name="zeros.FR_femur_joint" value="-0.401426" />
+    <param name="zeros.FR_tibia_joint" value="1.91986" />
+  </node>
 
   <node pkg="rviz2" exec="rviz2" output="screen" args="-d $(var rviz_config_path)" />
 </launch>
