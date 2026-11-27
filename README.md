@@ -99,24 +99,23 @@ I can now make a list of the hardware I'll need for the next steps:
 | 3× USB-C data cables, 10 Gbps                | [UGREEN USB-C to USB-C, 240 W](https://www.amazon.fr/dp/B0GZMCN439) — 1 m (camera), 2 × 2 m (U2D2, LiDAR)          |                €33.47 | Yes        |
 | **DEVELOPMENT SUBTOTAL**                    |                                                                                                                    | **€1,828.69 estimated** |            |
 | ----                                        | ----                                                                                                               |                  ---- | ----       |
-| **ONBOARD HARDWARE (assumptions)**          | **Not chosen yet — estimated prices**                                                                              |                       |            |
+| **ONBOARD HARDWARE (assumptions)**          | **Power parts chosen, computer not chosen yet — estimated prices**                                                 |                       |            |
 | 1× Onboard computer                         | [NVIDIA Jetson Orin Nano Super Developer Kit, 8 GB](https://fr.rs-online.com/web/p/modules-de-developpement-pour-processeurs/2647384) — 8 GB, not 4 GB; NVIDIA raised prices in Aug. 2026 ($249 → $399) |            ~€450–500 | No         |
 | 1× NVMe SSD                                 | M.2 2280, 256–512 GB, for Ubuntu and ROS 2 instead of a microSD card                                               |              ~€30–40 | No         |
-| 1× Battery                                  | [Gens Ace G-Tech 3S 5000 mAh 60C Shorty, soft case, XT60](https://gensace.de/products/gens-ace-g-tech-5000mah-11-1v-60c-3s1p-short-size-lipo-with-xt60-plug) — 130 × 45 × 28 mm, 346 g; no LiHV |                 ~€61 | No         |
-| 1× Battery charger                          | [ToolkitRC M7AC](https://www.studiosport.fr/chargeur-m7ac-toolkitrc-a26809.html) or M6AC — mains powered, adjustable end-of-charge voltage |              ~€70–75 | No         |
-| 1× LiPo safety bag                          | Fireproof bag for charging and storage                                                                             |                  ~€10 | No         |
-| 1× LiPo low-voltage alarm                   | Buzzer on the battery balance plug, set to 3.3 V per cell (~9.9 V for 3S)                                          |                   ~€5 | No         |
-| 1× Main fuse and holder                     | XT60 inline blade-fuse holder right after the battery, 15–20 A blade fuse                                          |                   ~€8 | No         |
-| 1× XT60 Y splitter                          | 1 input, 2 outputs: servo branch and computer branch, after the main fuse                                          |                   ~€5 | No         |
-| 1× Servo power switch                       | XT60 inline switch, ≥ 30 A, between the splitter and the PCB — cuts the servos only (emergency stop)               |                  ~€10 | No         |
+| 1× Battery                                  | [Matrix High Output NiMH 10.8 V 5000 mAh, large type, large Tamiya — Evike](https://www.evike.com/products/29059/Matrix-High-Output-Large-Type-Airsoft-NiMH-Battery-Configuration-10.8V-5000mAh-Large-Tamiya/) — 9 Sub-C cells, 205 × 48 × 25 mm, ~0.77 kg, 50 A pulsed; ships from the USA | ~€35–65 + shipping and import | No         |
+| 1× Battery adapter                          | [LINSYRC large Tamiya ↔ XT60 adapters, both directions, ×4](https://www.amazon.fr/LINSYRC-Adaptateur-Connecteur-Femelle-Dynamite/dp/B09ZDD3SKT) — battery Tamiya to XT60 female |                   ~€9 | No         |
+| 1× Battery charger                          | [Gens Ace iMars S100](https://www.amazon.fr/GensAce-Balance-Chargeur-connecteur-batteries/dp/B0DKSC3ZKJ) — mains powered, 100 W, 10 A, NiMH 4–18 cells and LiPo/LiFe 2–6S, XT60 |                  ~€58 | No         |
+| 1× Main fuse and holder                     | [PNGKNYOCN XT60 extension with inline blade-fuse holder, 14 AWG, 0.3 m](https://www.amazon.fr/PNGKNYOCN-dextension-batterie-dalimentation-portable/dp/B0CGQZ1L4F) — right after the battery, 15 A blade (replaceable, 20 A if it blows during big moves) |                   ~€9 | No         |
+| 1× XT60 Y splitter                          | [XT60 Y, 1 male to 2 female, 12 AWG, ×2](https://www.amazon.fr/connecteurs-parall%C3%A8les-extension-r%C3%A9partiteur-multirotors/dp/B0BL6XLKCK) — servo branch and computer branch, after the main fuse |                  ~€13 | No         |
+| 1× Servo power switch                       | [OTOTEC XT60 toggle switch, 15 A](https://www.amazon.fr/Interrupteur-%C3%A9lectrique-avec-connecteur-XT60/dp/B0C7CB3H13) — between the splitter and the PCB, cuts the servos only (emergency stop); no LED, no standby drain |                  ~€15 | No         |
 | 1× Computer fuse and holder                 | Small inline fuse holder, 5 A fuse, on the computer branch                                                         |                   ~€5 | No         |
 | 1× Computer power switch                    | Small inline switch, ≥ 5 A, on the computer branch                                                                 |                   ~€5 | No         |
 | 1× Step-up converter                        | [Pololu U3V70A, 4.5–20 V adjustable boost — EXP-Tech](https://exp-tech.de/en/products/45-20v-fine-adjust-step-up-voltage-regulator-u3v70a), set to 19 V; 40.6 × 15.2 mm, 3.9 g, 2 × M2 holes; XT60 male pigtail (AMASS) soldered on VIN/GND |                 ~€22 | No         |
 | 1× Jetson power cable                       | 5.5 × 2.5 mm barrel plug pigtail, centre positive, soldered on the step-up VOUT/GND                                |                   ~€5 | No         |
 | 1× Camera cable                             | USB-A to USB-C, USB 3, 20–30 cm (D435i → Jetson)                                                                   |                  ~€10 | No         |
 | 1× U2D2 cable                               | USB-A to USB-C, 20–30 cm (U2D2 → Jetson); the LiDAR uses its bundled cable                                         |                   ~€8 | No         |
-| **ONBOARD SUBTOTAL**                        |                                                                                                                    | **~€700–780 estimated** |            |
-| **PROVISIONAL TOTAL**                       | **Excluding shipping**                                                                                             | **~€2,525–2,610 estimated** |            |
+| **ONBOARD SUBTOTAL**                        |                                                                                                                    | **~€675–765 estimated** |            |
+| **PROVISIONAL TOTAL**                       | **Excluding shipping**                                                                                             | **~€2,505–2,595 estimated** |            |
 
 #### Dimensions and 3D Models
 
@@ -298,22 +297,22 @@ I removed the top cover to save weight and improve accessibility:
 
 | Item | Mass |
 | --- | ---: |
-| Body: printed frame (plates, standoffs, LiDAR table, camera base), 6 coxa servos, PCB, U2D2, LiDAR, screws | 0.89 kg |
+| Body: printed frame (plates, standoffs, LiDAR table, camera base), 6 coxa servos, PCB, U2D2, LiDAR, screws | 0.94 kg |
 | Jetson Orin Nano 8 GB developer kit (bare) | 0.17 kg |
-| Battery: Gens Ace G-Tech 3S 5000 mAh Shorty | 0.35 kg |
+| Battery: Matrix NiMH 10.8 V 5000 mAh large type | 0.77 kg |
 | Step-up converter: Pololu U3V70A | 0.004 kg |
 | 6 legs: 12 servos, brackets, tibias, TPU feet | 1.19 kg |
 | Camera and cradle | 0.09 kg |
-| **Model total** | **2.70 kg** |
+| **Model total** | **3.17 kg** |
 | Servo cables, XT60 power wiring, fuses and switches (estimate) | ~0.1 kg |
-| **Estimated total** | **~2.8 kg** |
+| **Estimated total** | **~3.3 kg** |
 
 | Movement              | Max femur torque | % of the 85 % limit | Max current per leg |
 | --------------------- | ---------------: | ------------------: | ------------------: |
-| Standing              |         0.27 N·m |                21 % |              0.45 A |
-| Tripod walk           |         0.70 N·m |                55 % |              0.89 A |
-| Ripple walk           |         0.49 N·m |                38 % |              0.67 A |
-| Turn in place         |         0.69 N·m |                54 % |              0.88 A |
-| Climbing a 50 mm step |         0.52 N·m |                41 % |              0.96 A |
-| Getting up from lying |         0.47 N·m |                37 % |              0.94 A |
+| Standing              |         0.32 N·m |                25 % |              0.53 A |
+| Tripod walk           |         0.82 N·m |                65 % |              1.04 A |
+| Ripple walk           |         0.57 N·m |                45 % |              0.78 A |
+| Turn in place         |         0.81 N·m |                64 % |              1.03 A |
+| Climbing a 50 mm step |         0.61 N·m |                48 % |              1.12 A |
+| Getting up from lying |         0.55 N·m |                43 % |              1.10 A |
 
